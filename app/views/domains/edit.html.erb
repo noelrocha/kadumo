@@ -1,0 +1,16 @@
+<h1>Editing domain</h1>
+
+<% form_for(@domain) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @domain %> |
+<%= link_to 'Back', domains_path %>
