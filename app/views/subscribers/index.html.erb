@@ -1,0 +1,30 @@
+<h1>Listing subscribers</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Domain</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email address</th>
+  </tr>
+
+<% for subscriber in @subscribers %>
+  <tr>
+    <td><%=h subscriber.username %></td>
+    <td><%=h subscriber.password %></td>
+    <td><%=h subscriber.domain %></td>
+    <td><%=h subscriber.first_name %></td>
+    <td><%=h subscriber.last_name %></td>
+    <td><%=h subscriber.email_address %></td>
+    <td><%= link_to 'Show', subscriber %></td>
+    <td><%= link_to 'Edit', edit_subscriber_path(subscriber) %></td>
+    <td><%= link_to 'Destroy', subscriber, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New subscriber', new_subscriber_path %>

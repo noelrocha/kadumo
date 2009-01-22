@@ -1,0 +1,33 @@
+<p>
+  <b>Username:</b>
+  <%=h @subscriber.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @subscriber.password %>
+</p>
+
+<p>
+  <b>Domain:</b>
+  <%=h @subscriber.domain %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%=h @subscriber.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @subscriber.last_name %>
+</p>
+
+<p>
+  <b>Email address:</b>
+  <%=h @subscriber.email_address %>
+</p>
+
+
+<%= link_to 'Edit', edit_subscriber_path(@subscriber) %> |
+<%= link_to 'Back', subscribers_path %>
