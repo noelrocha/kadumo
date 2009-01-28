@@ -7,7 +7,7 @@ development:
   routes: lcr
   user_groups: grp
   dialogs: dialog
-  user_aliases: dbaliases
+  dbaliases: aliases
   user_preferences: usr_preferences
   trusted_hosts: trusted
   carrier_routes: carrierroute
@@ -21,7 +21,7 @@ test:
   routes: lcr
   user_groups: grp
   dialogs: dialog
-  user_aliases: dbaliases
+  aliases: dbaliases
   user_preferences: usr_preferences
   trusted_hosts: trusted
   carrier_routes: carrierroute
@@ -35,7 +35,7 @@ production:
   routes: lcr
   user_groups: grp
   dialogs: dialog
-  user_aliases: dbaliases
+  dbaliases: dbaliases
   user_preferences: usr_preferences
   trusted_hosts: trusted
   carrier_routes: carrierroute

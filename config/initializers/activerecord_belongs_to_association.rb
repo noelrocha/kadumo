@@ -1,33 +1,22 @@
-#class ActiveRecord::Associations::BelongsToAssociation < ActiveRecord::Associations::AssociationProxy
 module ActiveRecord
   module Associations
     class BelongsToAssociation < AssociationProxy #:nodoc:
 
+      alias_method :orig_replace, :replace
       def replace(record)
-        counter_cache_name = @reflection.counter_cache_column
+        new_record = orig_replace(record)
 
-        if record.nil?
-          if counter_cache_name && !@owner.new_record?
-            @reflection.klass.decrement_counter(counter_cache_name, @owner[@reflection.primary_key_name]) if @owner[@reflection.primary_key_name]
-          end
+        if !new_record.nil?
+          raise_on_type_mismatch(new_record)
 
-          @target = @owner[@reflection.primary_key_name] = nil
-        else                    
-          raise_on_type_mismatch(record)
-                    
-          if counter_cache_name && !@owner.new_record?
-            @reflection.klass.increment_counter(counter_cache_name, record.id)
-            @reflection.klass.decrement_counter(counter_cache_name, @owner[@reflection.primary_key_name]) if @owner[@reflection.primary_key_name]
-          end
-  
-          record_id = record.send(@reflection.options[:primary_key] || :id)
-          @target = (AssociationProxy === record ? record.target : record)
-          @owner[@reflection.primary_key_name] = record_id unless record.new_record?
+          record_id = new_record.send(@reflection.options[:primary_key] || :id)
+          @target = (AssociationProxy === new_record ? new_record.target : new_record)
+          @owner[@reflection.primary_key_name] = record_id unless new_record.new_record?
           @updated = true
         end
-
+        
         loaded
-        record
+        new_record
       end
 
       private

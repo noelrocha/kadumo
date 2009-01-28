@@ -1,0 +1,23 @@
+<p>
+  <b>Username:</b>
+  <%=h @alias.username %>
+</p>
+
+<p>
+  <b>Domain:</b>
+  <%=h @alias.domain %>
+</p>
+
+<p>
+  <b>Alias username:</b>
+  <%=h @alias.alias_username %>
+</p>
+
+<p>
+  <b>Alias domain:</b>
+  <%=h @alias.alias_domain %>
+</p>
+
+
+<%= link_to 'Edit', edit_alias_path(@alias) %> |
+<%= link_to 'Back', aliases_path %>

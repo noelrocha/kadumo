@@ -148,7 +148,7 @@ module ActiveScaffold
                          :conditions => all_conditions,
                          :joins => joins_for_finder,
                          :include => options[:count_includes]}
-
+debugger
       # NOTE: we must use :include in the count query, because some conditions may reference other tables
       count = klass.count(finder_options.reject{|k,v| [:order].include? k})
 

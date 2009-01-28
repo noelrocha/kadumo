@@ -14,8 +14,14 @@ module ActiveScaffold::Config
 
       # originates here
       @sorting = ActiveScaffold::DataStructures::Sorting.new(@core.columns)
-      @sorting.add @core.model.primary_key, 'ASC'
-
+      if @core.model.primary_key.is_a? Array
+        @core.model.primary_key.each do |pk|
+          @sorting.add pk, 'ASC'
+        end
+      else
+        @sorting.add @core.model.primary_key, 'ASC'
+      end
+      
       # inherit from global scope
       @empty_field_text = self.class.empty_field_text
     end

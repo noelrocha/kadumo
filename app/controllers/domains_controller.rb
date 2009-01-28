@@ -3,7 +3,7 @@ class DomainsController < ApplicationController
   active_scaffold :domain do |config|
     config.label = "Domains"
     config.columns = [:name]
-    list.sorting = {:name => 'ASC'}
+    config.list.sorting = {:name => 'ASC'}
   end
   
 end
