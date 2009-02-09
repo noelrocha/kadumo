@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  prefix: MyString
+  from_uri: MyString
+  grp_id: 1
+  priority: 1
+
+two:
+  prefix: MyString
+  from_uri: MyString
+  grp_id: 1
+  priority: 1

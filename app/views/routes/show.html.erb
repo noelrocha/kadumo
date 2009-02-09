@@ -1,0 +1,23 @@
+<p>
+  <b>Prefix:</b>
+  <%=h @route.prefix %>
+</p>
+
+<p>
+  <b>From uri:</b>
+  <%=h @route.from_uri %>
+</p>
+
+<p>
+  <b>Grp:</b>
+  <%=h @route.grp_id %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%=h @route.priority %>
+</p>
+
+
+<%= link_to 'Edit', edit_route_path(@route) %> |
+<%= link_to 'Back', routes_path %>

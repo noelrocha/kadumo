@@ -1,0 +1,26 @@
+<h1>Listing routes</h1>
+
+<table>
+  <tr>
+    <th>Prefix</th>
+    <th>From uri</th>
+    <th>Grp</th>
+    <th>Priority</th>
+  </tr>
+
+<% for route in @routes %>
+  <tr>
+    <td><%=h route.prefix %></td>
+    <td><%=h route.from_uri %></td>
+    <td><%=h route.grp_id %></td>
+    <td><%=h route.priority %></td>
+    <td><%= link_to 'Show', route %></td>
+    <td><%= link_to 'Edit', edit_route_path(route) %></td>
+    <td><%= link_to 'Destroy', route, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New route', new_route_path %>

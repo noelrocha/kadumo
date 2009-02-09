@@ -1,0 +1,28 @@
+<h1>Editing route</h1>
+
+<% form_for(@route) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :prefix %><br />
+    <%= f.text_field :prefix %>
+  </p>
+  <p>
+    <%= f.label :from_uri %><br />
+    <%= f.text_field :from_uri %>
+  </p>
+  <p>
+    <%= f.label :grp_id %><br />
+    <%= f.text_field :grp_id %>
+  </p>
+  <p>
+    <%= f.label :priority %><br />
+    <%= f.text_field :priority %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @route %> |
+<%= link_to 'Back', routes_path %>
