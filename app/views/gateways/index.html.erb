@@ -1,0 +1,36 @@
+<h1>Listing gateways</h1>
+
+<table>
+  <tr>
+    <th>Gw name</th>
+    <th>Grp</th>
+    <th>Ip addr</th>
+    <th>Port</th>
+    <th>Uri scheme</th>
+    <th>Transport</th>
+    <th>Strip</th>
+    <th>Tag</th>
+    <th>Flags</th>
+  </tr>
+
+<% for gateway in @gateways %>
+  <tr>
+    <td><%=h gateway.gw_name %></td>
+    <td><%=h gateway.grp_id %></td>
+    <td><%=h gateway.ip_addr %></td>
+    <td><%=h gateway.port %></td>
+    <td><%=h gateway.uri_scheme %></td>
+    <td><%=h gateway.transport %></td>
+    <td><%=h gateway.strip %></td>
+    <td><%=h gateway.tag %></td>
+    <td><%=h gateway.flags %></td>
+    <td><%= link_to 'Show', gateway %></td>
+    <td><%= link_to 'Edit', edit_gateway_path(gateway) %></td>
+    <td><%= link_to 'Destroy', gateway, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New gateway', new_gateway_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  gw_name: MyString
+  grp_id: 1
+  ip_addr: MyString
+  port: 1
+  uri_scheme: 1
+  transport: 1
+  strip: 1
+  tag: MyString
+  flags: 1
+
+two:
+  gw_name: MyString
+  grp_id: 1
+  ip_addr: MyString
+  port: 1
+  uri_scheme: 1
+  transport: 1
+  strip: 1
+  tag: MyString
+  flags: 1

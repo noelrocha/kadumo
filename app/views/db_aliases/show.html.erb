@@ -1,0 +1,23 @@
+<p>
+  <b>Username:</b>
+  <%=h @db_alias.username %>
+</p>
+
+<p>
+  <b>Domain:</b>
+  <%=h @db_alias.domain %>
+</p>
+
+<p>
+  <b>Alias username:</b>
+  <%=h @db_alias.alias_username %>
+</p>
+
+<p>
+  <b>Alias domain:</b>
+  <%=h @db_alias.alias_domain %>
+</p>
+
+
+<%= link_to 'Edit', edit_db_alias_path(@db_alias) %> |
+<%= link_to 'Back', db_aliases_path %>

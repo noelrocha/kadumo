@@ -1,0 +1,27 @@
+<h1>New db_alias</h1>
+
+<% form_for(@db_alias) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :domain %><br />
+    <%= f.text_field :domain %>
+  </p>
+  <p>
+    <%= f.label :alias_username %><br />
+    <%= f.text_field :alias_username %>
+  </p>
+  <p>
+    <%= f.label :alias_domain %><br />
+    <%= f.text_field :alias_domain %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', db_aliases_path %>

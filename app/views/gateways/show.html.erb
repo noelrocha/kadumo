@@ -1,0 +1,48 @@
+<p>
+  <b>Gw name:</b>
+  <%=h @gateway.gw_name %>
+</p>
+
+<p>
+  <b>Grp:</b>
+  <%=h @gateway.grp_id %>
+</p>
+
+<p>
+  <b>Ip addr:</b>
+  <%=h @gateway.ip_addr %>
+</p>
+
+<p>
+  <b>Port:</b>
+  <%=h @gateway.port %>
+</p>
+
+<p>
+  <b>Uri scheme:</b>
+  <%=h @gateway.uri_scheme %>
+</p>
+
+<p>
+  <b>Transport:</b>
+  <%=h @gateway.transport %>
+</p>
+
+<p>
+  <b>Strip:</b>
+  <%=h @gateway.strip %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%=h @gateway.tag %>
+</p>
+
+<p>
+  <b>Flags:</b>
+  <%=h @gateway.flags %>
+</p>
+
+
+<%= link_to 'Edit', edit_gateway_path(@gateway) %> |
+<%= link_to 'Back', gateways_path %>

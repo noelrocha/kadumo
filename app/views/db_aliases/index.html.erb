@@ -1,0 +1,26 @@
+<h1>Listing db_aliases</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Domain</th>
+    <th>Alias username</th>
+    <th>Alias domain</th>
+  </tr>
+
+<% for db_alias in @db_aliases %>
+  <tr>
+    <td><%=h db_alias.username %></td>
+    <td><%=h db_alias.domain %></td>
+    <td><%=h db_alias.alias_username %></td>
+    <td><%=h db_alias.alias_domain %></td>
+    <td><%= link_to 'Show', db_alias %></td>
+    <td><%= link_to 'Edit', edit_db_alias_path(db_alias) %></td>
+    <td><%= link_to 'Destroy', db_alias, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New db_alias', new_db_alias_path %>

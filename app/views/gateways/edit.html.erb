@@ -1,0 +1,48 @@
+<h1>Editing gateway</h1>
+
+<% form_for(@gateway) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :gw_name %><br />
+    <%= f.text_field :gw_name %>
+  </p>
+  <p>
+    <%= f.label :grp_id %><br />
+    <%= f.text_field :grp_id %>
+  </p>
+  <p>
+    <%= f.label :ip_addr %><br />
+    <%= f.text_field :ip_addr %>
+  </p>
+  <p>
+    <%= f.label :port %><br />
+    <%= f.text_field :port %>
+  </p>
+  <p>
+    <%= f.label :uri_scheme %><br />
+    <%= f.text_field :uri_scheme %>
+  </p>
+  <p>
+    <%= f.label :transport %><br />
+    <%= f.text_field :transport %>
+  </p>
+  <p>
+    <%= f.label :strip %><br />
+    <%= f.text_field :strip %>
+  </p>
+  <p>
+    <%= f.label :tag %><br />
+    <%= f.text_field :tag %>
+  </p>
+  <p>
+    <%= f.label :flags %><br />
+    <%= f.text_field :flags %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @gateway %> |
+<%= link_to 'Back', gateways_path %>
