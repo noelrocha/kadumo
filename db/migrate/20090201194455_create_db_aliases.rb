@@ -1,6 +1,6 @@
 class CreateDbAliases < ActiveRecord::Migration
   def self.up
-    create_table :db_aliases do |t|
+    create_table APP_TABLES_NAMES['dbaliases'] do |t|
       t.string :username
       t.string :domain
       t.string :alias_username
@@ -11,6 +11,6 @@ class CreateDbAliases < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :db_aliases
+    drop_table APP_TABLES_NAMES['dbaliases']
   end
 end

@@ -1,6 +1,6 @@
 class CreateRoutes < ActiveRecord::Migration
   def self.up
-    create_table :routes do |t|
+    create_table APP_TABLES_NAMES['routes'] do |t|
       t.string :prefix
       t.string :from_uri
       t.integer :grp_id
@@ -11,6 +11,6 @@ class CreateRoutes < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :routes
+    drop_table APP_TABLES_NAMES['routes']
   end
 end
