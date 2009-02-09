@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :routes
+
   map.resources :gateways
 
   map.resources :db_aliases

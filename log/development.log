@@ -13428,3 +13428,1361 @@ Rendered _list_actions (3.6ms)
 Rendered _list_record (12.0ms)
 Rendered _list (64.6ms)
 Completed in 174ms (View: 88, DB: 8) | 200 OK [http://localhost/subscribers?authenticity_token=70c6d7f7d29e3f67080ac44aed40fca659826a0c]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-09 18:24:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"gateways"}
+
+
+ActiveRecord::StatementInvalid (Could not find table 'gateways'):
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    /vendor/rails/activesupport/lib/active_support/core_ext/object/misc.rb:39:in `returning'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1220:in `columns'
+    /vendor/plugins/active_scaffold/lib/active_scaffold/config/core.rb:100:in `initialize'
+    /vendor/plugins/active_scaffold/lib/active_scaffold.rb:56:in `new'
+    /vendor/plugins/active_scaffold/lib/active_scaffold.rb:56:in `active_scaffold'
+    /app/controllers/gateways_controller.rb:2
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:381:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:256:in `require_or_load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:427:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:77:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:89:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:352:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:351:in `each'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:351:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:388:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (72.2ms)
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (5.5ms)
+Rendering /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDomains (20090119015603)
+Migrating to CreateSubscribers (20090119025010)
+Migrating to CreateDbAliases (20090201194455)
+Migrating to CreateGateways (20090209182720)
+  [4;36;1mSQL (19.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (4.4ms)[0m   [0mCREATE TABLE "gateways" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "gw_name" varchar(255), "grp_id" integer, "ip_addr" varchar(255), "port" integer, "uri_scheme" integer, "transport" integer, "strip" integer, "tag" varchar(255), "flags" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090209182720')[0m
+  [4;35;1mSQL (2.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("aliases")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("db_aliases")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("domain")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("gateways")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("subscriber")[0m
+
+
+Processing GatewaysController#index (for 127.0.0.1 at 2009-02-09 18:25:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"gateways"}
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "gateways" [0m
+  [4;35;1mGateway Load (0.5ms)[0m   [0mSELECT "gateways".* FROM "gateways" ORDER BY gateways."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "gateways".* FROM "gateways" ORDER BY gateways."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering template within layouts/gateways
+Rendering gateways/list
+Rendered _list_header (5.2ms)
+Rendered _list_column_headings (9.3ms)
+Rendered _messages (0.9ms)
+Rendered _list (21.9ms)
+Completed in 237ms (View: 183, DB: 1) | 200 OK [http://localhost/gateways]
+
+
+Processing GatewaysController#index (for 127.0.0.1 at 2009-02-09 18:26:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"gateways"}
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "gateways" [0m
+  [4;36;1mGateway Load (0.4ms)[0m   [0;1mSELECT "gateways".* FROM "gateways" ORDER BY gateways."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "gateways".* FROM "gateways" ORDER BY gateways."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering template within layouts/gateways
+Rendering gateways/list
+Rendered _list_header (3.3ms)
+Rendered _list_column_headings (7.8ms)
+Rendered _messages (0.6ms)
+Rendered _list (18.6ms)
+Completed in 59ms (View: 42, DB: 1) | 200 OK [http://localhost/gateways]
+
+
+Processing GatewaysController#index (for 127.0.0.1 at 2009-02-09 18:26:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"gateways"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "gateways" [0m
+  [4;35;1mGateway Load (0.4ms)[0m   [0mSELECT "gateways".* FROM "gateways" ORDER BY gateways."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "gateways".* FROM "gateways" ORDER BY gateways."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering template within layouts/default
+Rendering gateways/list
+Rendered _list_header (2.9ms)
+Rendered _list_column_headings (8.0ms)
+Rendered _messages (0.6ms)
+Rendered _list (18.6ms)
+Completed in 67ms (View: 50, DB: 1) | 200 OK [http://localhost/gateways]
+
+
+Processing GatewaysController#index (for 127.0.0.1 at 2009-02-09 18:27:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"gateways"}
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "gateways" [0m
+  [4;36;1mGateway Load (0.5ms)[0m   [0;1mSELECT "gateways".* FROM "gateways" ORDER BY gateways."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "gateways".* FROM "gateways" ORDER BY gateways."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering template within layouts/default
+Rendering gateways/list
+Rendered _list_header (150.8ms)
+Rendered _list_column_headings (8.0ms)
+Rendered _messages (0.6ms)
+Rendered _list (19.1ms)
+Completed in 218ms (View: 199, DB: 1) | 200 OK [http://localhost/gateways]
+
+
+Processing GatewaysController#index (for 127.0.0.1 at 2009-02-09 18:27:30) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"gateways"}
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "gateways" [0m
+  [4;35;1mGateway Load (0.5ms)[0m   [0mSELECT "gateways".* FROM "gateways" ORDER BY gateways."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "gateways".* FROM "gateways" ORDER BY gateways."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering gateways/list
+Rendered _list_header (4.1ms)
+Rendered _list_column_headings (8.6ms)
+Rendered _messages (0.6ms)
+Rendered _list (19.7ms)
+Completed in 57ms (View: 39, DB: 1) | 200 OK [http://localhost/gateways?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing SubscribersController#index (for 127.0.0.1 at 2009-02-09 18:27:31) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"subscribers"}
+  [4;35;1mSQL (2.6ms)[0m   [0mSELECT COUNT(*) AS count_all FROM (SELECT DISTINCT "subscriber".id FROM "subscriber" LEFT OUTER JOIN "domain" ON "domain".id = "subscriber".domain ) count_all_subquery[0m
+  [4;36;1mSubscriber Load (1.2ms)[0m   [0;1mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domain" WHERE ("domain"."name" = 'newdomain') LIMIT 1[0m
+  [4;36;1mDomain Load (0.9ms)[0m   [0;1mSELECT * FROM "domain" WHERE ("domain"."name" = 'example.com') LIMIT 1[0m
+  [4;35;1mDomain Load (1.6ms)[0m   [0mSELECT * FROM "domain" WHERE ("domain"."id" IN (0,0)) [0m
+Rendering subscribers/list
+Rendered _list_header (4.8ms)
+Rendered _list_column_headings (11.5ms)
+Rendered _messages (0.7ms)
+Rendered _list_actions (5.5ms)
+Rendered _list_record (18.0ms)
+Rendered _list_actions (3.5ms)
+Rendered _list_record (11.3ms)
+Rendered _list (60.2ms)
+Completed in 184ms (View: 81, DB: 7) | 200 OK [http://localhost/subscribers?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing DbAliasesController#index (for 127.0.0.1 at 2009-02-09 18:27:33) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"db_aliases"}
+  [4;36;1mSQL (2.5ms)[0m   [0;1mSELECT COUNT(*) AS count_all FROM (SELECT DISTINCT "db_aliases".id FROM "db_aliases" LEFT OUTER JOIN "domain" ON "domain".id = "db_aliases".domain ) count_all_subquery[0m
+  [4;35;1mDbAlias Load (0.9ms)[0m   [0mSELECT "db_aliases".* FROM "db_aliases" [0m
+  [4;36;1mDomain Load (0.8ms)[0m   [0;1mSELECT * FROM "domain" WHERE ("domain"."name" = 'newdomain') LIMIT 1[0m
+  [4;35;1mDomain Load (0.4ms)[0m   [0mSELECT * FROM "domain" WHERE ("domain"."id" = 0) [0m
+Rendering db_aliases/list
+Rendered _list_header (4.8ms)
+Rendered _list_column_headings (10.5ms)
+Rendered _messages (0.6ms)
+Rendered _list_actions (5.0ms)
+Rendered _list_record (15.8ms)
+Rendered _list (42.1ms)
+Completed in 142ms (View: 64, DB: 5) | 200 OK [http://localhost/db_aliases?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2009-02-09 18:27:34) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"domains"}
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM "domain" [0m
+  [4;35;1mDomain Load (2.4ms)[0m   [0mSELECT "domain".* FROM "domain" ORDER BY domain."name" ASC LIMIT 15 OFFSET 0[0m
+Rendering domains/list
+Rendered _list_header (4.2ms)
+Rendered _list_column_headings (3.9ms)
+Rendered _messages (0.6ms)
+Rendered _list_actions (4.6ms)
+Rendered _list_record (11.3ms)
+Rendered _list_actions (3.4ms)
+Rendered _list_record (6.5ms)
+Rendered _list (37.4ms)
+Completed in 75ms (View: 58, DB: 3) | 200 OK [http://localhost/domains?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing GatewaysController#index (for 127.0.0.1 at 2009-02-09 18:27:36) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"gateways"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "gateways" [0m
+  [4;35;1mGateway Load (0.4ms)[0m   [0mSELECT "gateways".* FROM "gateways" ORDER BY gateways."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "gateways".* FROM "gateways" ORDER BY gateways."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering gateways/list
+Rendered _list_header (3.2ms)
+Rendered _list_column_headings (8.5ms)
+Rendered _messages (0.6ms)
+Rendered _list (19.5ms)
+Completed in 55ms (View: 38, DB: 1) | 200 OK [http://localhost/gateways?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing GatewaysController#new (for 127.0.0.1 at 2009-02-09 18:27:38) [GET]
+  Parameters: {"action"=>"new", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "adapter"=>"_list_inline_adapter", "controller"=>"gateways"}
+Rendered _form_attribute (1.3ms)
+Rendered _form_attribute (1.3ms)
+Rendered _form_attribute (1.3ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form (30.8ms)
+Rendered _create_form (42.0ms)
+Rendering _list_inline_adapter
+Rendered _messages (0.7ms)
+Rendered _list_inline_adapter (7.8ms)
+Completed in 90ms (View: 8, DB: 0) | 200 OK [http://localhost/gateways/new?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b&adapter=_list_inline_adapter]
+
+
+Processing GatewaysController#create (for 127.0.0.1 at 2009-02-09 18:27:58) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"gateways", "record"=>{"flags"=>"", "ip_addr"=>"123123123", "grp_id"=>"", "tag"=>"", "port"=>"", "strip"=>"", "uri_scheme"=>"1", "gw_name"=>"teste", "transport"=>"1"}}
+  [4;35;1mGateway Create (1.0ms)[0m   [0mINSERT INTO "gateways" ("flags", "updated_at", "ip_addr", "grp_id", "tag", "port", "uri_scheme", "strip", "gw_name", "transport", "created_at") VALUES(NULL, '2009-02-09 20:27:58', '123123123', NULL, NULL, NULL, 1, NULL, 'teste', 1, '2009-02-09 20:27:58')[0m
+Rendering gateways/create.rjs
+
+
+ActionView::TemplateError (undefined method `ip_address' for #<Gateway:0x22baf50>) on line #11 of vendor/plugins/active_scaffold/frontends/default/views/_list_record.rhtml:
+8: 
+9: <tr class="record <%= tr_class %>" id="<%= element_row_id(:action => :list, :id => record.id) %>">
+10:   <% active_scaffold_config.list.columns.each do |column| %>
+11:     <% column_value = get_column_value(record, column) -%>
+12: 
+13:     <td class="<%= column_class(column, column_value) %>" >
+14:       <%= render_list_column(column_value, column, record) %>
+
+    vendor/rails/activerecord/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    vendor/plugins/active_scaffold/lib/active_scaffold/helpers/list_column_helpers.rb:21:in `send'
+    vendor/plugins/active_scaffold/lib/active_scaffold/helpers/list_column_helpers.rb:21:in `get_column_value'
+    vendor/plugins/active_scaffold/frontends/default/views/_list_record.rhtml:11
+    vendor/plugins/active_scaffold/lib/active_scaffold/data_structures/action_columns.rb:69:in `each'
+    vendor/plugins/active_scaffold/lib/active_scaffold/data_structures/action_columns.rb:56:in `each'
+    vendor/plugins/active_scaffold/frontends/default/views/_list_record.rhtml:10
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render_without_active_scaffold'
+    vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+    vendor/rails/actionpack/lib/action_view/helpers/prototype_helper.rb:1002:in `render'
+    vendor/rails/actionpack/lib/action_view/helpers/prototype_helper.rb:752:in `insert_html'
+    vendor/plugins/active_scaffold/frontends/default/views/create.rjs:4:in `__instance_exec0'
+    vendor/rails/activesupport/lib/active_support/core_ext/object/extending.rb:74:in `send'
+    vendor/rails/activesupport/lib/active_support/core_ext/object/extending.rb:74:in `instance_exec'
+    vendor/rails/actionpack/lib/action_view/helpers/prototype_helper.rb:587:in `initialize'
+    vendor/rails/actionpack/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    vendor/rails/actionpack/lib/action_view/helpers/prototype_helper.rb:586:in `initialize'
+    vendor/rails/actionpack/lib/action_view/helpers/prototype_helper.rb:1038:in `new'
+    vendor/rails/actionpack/lib/action_view/helpers/prototype_helper.rb:1038:in `update_page'
+    vendor/plugins/active_scaffold/frontends/default/views/create.rjs:1
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render_without_active_scaffold'
+    vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render_without_active_scaffold'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render_without_active_scaffold'
+    vendor/plugins/active_scaffold/lib/extensions/action_controller_rendering.rb:13:in `render'
+    vendor/plugins/active_scaffold/lib/active_scaffold/actions/create.rb:55:in `create'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    vendor/plugins/active_scaffold/lib/active_scaffold/actions/create.rb:31:in `create'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (427.8ms)
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (10.1ms)
+Rendering /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing GatewaysController#index (for 127.0.0.1 at 2009-02-09 18:28:29) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"gateways"}
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "gateways" [0m
+  [4;35;1mGateway Load (1.1ms)[0m   [0mSELECT "gateways".* FROM "gateways" ORDER BY gateways."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering gateways/list
+Rendered _list_header (3.2ms)
+Rendered _list_column_headings (9.5ms)
+Rendered _messages (0.6ms)
+Rendered _list_actions (5.1ms)
+Rendered _list_record (14.5ms)
+Rendered _list (39.5ms)
+Completed in 75ms (View: 58, DB: 2) | 200 OK [http://localhost/gateways?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing GatewaysController#edit (for 127.0.0.1 at 2009-02-09 18:28:32) [GET]
+  Parameters: {"action"=>"edit", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "adapter"=>"_list_inline_adapter", "id"=>"1", "controller"=>"gateways"}
+  [4;36;1mGateway Load (1.1ms)[0m   [0;1mSELECT * FROM "gateways" WHERE ("gateways"."id" = 1) [0m
+Rendered _form_attribute (1.3ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (2.1ms)
+Rendered _form_attribute (1.3ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form (29.9ms)
+Rendered _update_form (40.6ms)
+Rendering _list_inline_adapter
+Rendered _messages (0.7ms)
+Rendered _list_inline_adapter (11.1ms)
+Completed in 88ms (View: 12, DB: 0) | 200 OK [http://localhost/gateways/1/edit?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b&adapter=_list_inline_adapter]
+
+
+Processing GatewaysController#index (for 127.0.0.1 at 2009-02-09 18:28:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"gateways"}
+  [4;35;1mSQL (7.6ms)[0m   [0mSELECT count(*) AS count_all FROM "gateways" [0m
+  [4;36;1mGateway Load (1.5ms)[0m   [0;1mSELECT "gateways".* FROM "gateways" ORDER BY gateways."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering template within layouts/default
+Rendering gateways/list
+Rendered _list_header (3.2ms)
+Rendered _list_column_headings (11.0ms)
+Rendered _messages (0.7ms)
+Rendered _list_actions (4.2ms)
+Rendered _list_record (13.8ms)
+Rendered _list (40.7ms)
+Completed in 112ms (View: 83, DB: 9) | 200 OK [http://localhost/gateways]
+
+
+Processing GatewaysController#edit (for 127.0.0.1 at 2009-02-09 18:29:01) [GET]
+  Parameters: {"action"=>"edit", "_method"=>"get", "adapter"=>"_list_inline_adapter", "id"=>"1", "controller"=>"gateways"}
+  [4;35;1mGateway Load (1.1ms)[0m   [0mSELECT * FROM "gateways" WHERE ("gateways"."id" = 1) [0m
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.4ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form (30.3ms)
+Rendered _update_form (40.6ms)
+Rendering _list_inline_adapter
+Rendered _messages (0.7ms)
+Rendered _list_inline_adapter (7.0ms)
+Completed in 67ms (View: 8, DB: 0) | 200 OK [http://localhost/gateways/1/edit?_method=get&adapter=_list_inline_adapter]
+
+
+Processing SubscribersController#index (for 127.0.0.1 at 2009-02-09 18:29:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subscribers"}
+  [4;36;1mSQL (3.6ms)[0m   [0;1mSELECT COUNT(*) AS count_all FROM (SELECT DISTINCT "subscriber".id FROM "subscriber" LEFT OUTER JOIN "domain" ON "domain".id = "subscriber".domain ) count_all_subquery[0m
+  [4;35;1mSubscriber Load (1.4ms)[0m   [0mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mDomain Load (0.8ms)[0m   [0;1mSELECT * FROM "domain" WHERE ("domain"."name" = 'newdomain') LIMIT 1[0m
+  [4;35;1mDomain Load (1.5ms)[0m   [0mSELECT * FROM "domain" WHERE ("domain"."name" = 'example.com') LIMIT 1[0m
+  [4;36;1mDomain Load (1.4ms)[0m   [0;1mSELECT * FROM "domain" WHERE ("domain"."id" IN (0,0)) [0m
+Rendering template within layouts/default
+Rendering subscribers/list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (13.3ms)
+Rendered _messages (0.7ms)
+Rendered _list_actions (4.2ms)
+Rendered _list_record (16.0ms)
+Rendered _list_actions (3.3ms)
+Rendered _list_record (11.5ms)
+Rendered _list (58.6ms)
+Completed in 327ms (View: 91, DB: 9) | 200 OK [http://localhost/]
+
+
+Processing GatewaysController#index (for 127.0.0.1 at 2009-02-09 18:29:54) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"gateways"}
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "gateways" [0m
+  [4;36;1mGateway Load (1.2ms)[0m   [0;1mSELECT "gateways".* FROM "gateways" ORDER BY gateways."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering gateways/list
+Rendered _list_header (3.1ms)
+Rendered _list_column_headings (9.6ms)
+Rendered _messages (0.8ms)
+Rendered _list_actions (3.4ms)
+Rendered _list_record (12.0ms)
+Rendered _list (39.5ms)
+Completed in 77ms (View: 60, DB: 2) | 200 OK [http://localhost/gateways?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing GatewaysController#new (for 127.0.0.1 at 2009-02-09 18:29:57) [GET]
+  Parameters: {"action"=>"new", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "adapter"=>"_list_inline_adapter", "controller"=>"gateways"}
+Rendered _form_attribute (2.0ms)
+Rendered _form_attribute (1.5ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.4ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.3ms)
+Rendered _form_attribute (1.3ms)
+Rendered _form (32.6ms)
+Rendered _create_form (42.5ms)
+Rendering _list_inline_adapter
+Rendered _messages (0.6ms)
+Rendered _list_inline_adapter (7.0ms)
+Completed in 68ms (View: 8, DB: 0) | 200 OK [http://localhost/gateways/new?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b&adapter=_list_inline_adapter]
+
+
+Processing GatewaysController#create (for 127.0.0.1 at 2009-02-09 18:30:04) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"gateways", "record"=>{"flags"=>"", "ip_addr"=>"adasdasdasd", "grp_id"=>"", "tag"=>"", "port"=>"", "strip"=>"", "uri_scheme"=>"2", "gw_name"=>"teste2", "transport"=>""}}
+  [4;35;1mGateway Create (228.2ms)[0m   [0mINSERT INTO "gateways" ("flags", "updated_at", "ip_addr", "grp_id", "tag", "port", "uri_scheme", "strip", "gw_name", "transport", "created_at") VALUES(NULL, '2009-02-09 20:30:04', 'adasdasdasd', NULL, NULL, NULL, 2, NULL, 'teste2', NULL, '2009-02-09 20:30:04')[0m
+Rendering gateways/create.rjs
+Rendered _list_actions (3.9ms)
+Rendered _list_record (14.5ms)
+Completed in 275ms (View: 24, DB: 228) | 200 OK [http://localhost/gateways?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing GatewaysController#edit (for 127.0.0.1 at 2009-02-09 18:30:09) [GET]
+  Parameters: {"action"=>"edit", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "adapter"=>"_list_inline_adapter", "id"=>"2", "controller"=>"gateways"}
+  [4;36;1mGateway Load (1.0ms)[0m   [0;1mSELECT * FROM "gateways" WHERE ("gateways"."id" = 2) [0m
+Rendered _form_attribute (1.3ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form (28.7ms)
+Rendered _update_form (38.7ms)
+Rendering _list_inline_adapter
+Rendered _messages (0.6ms)
+Rendered _list_inline_adapter (7.2ms)
+Completed in 65ms (View: 8, DB: 0) | 200 OK [http://localhost/gateways/2/edit?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b&adapter=_list_inline_adapter]
+
+
+Processing GatewaysController#update (for 127.0.0.1 at 2009-02-09 18:30:12) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "id"=>"2", "controller"=>"gateways", "record"=>{"flags"=>"", "ip_addr"=>"adasdasdasd", "grp_id"=>"", "tag"=>"", "port"=>"", "strip"=>"", "uri_scheme"=>"1", "gw_name"=>"teste2", "transport"=>""}}
+  [4;35;1mGateway Load (1.1ms)[0m   [0mSELECT * FROM "gateways" WHERE ("gateways"."id" = 2) [0m
+  [4;36;1mGateway Update (0.9ms)[0m   [0;1mUPDATE "gateways" SET "uri_scheme" = 1, "updated_at" = '2009-02-09 20:30:12' WHERE "id" = 2[0m
+Rendering gateways/update.rjs
+Completed in 60ms (View: 26, DB: 2) | 200 OK [http://localhost/gateways/2?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing GatewaysController#row (for 127.0.0.1 at 2009-02-09 18:30:12) [GET]
+  Parameters: {"action"=>"row", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "id"=>"2", "controller"=>"gateways"}
+  [4;35;1mGateway Load (1.2ms)[0m   [0mSELECT * FROM "gateways" WHERE ("gateways"."id" = 2) [0m
+Rendered _list_actions (4.7ms)
+Rendered _list_record (16.1ms)
+Completed in 37ms (View: 23, DB: 1) | 200 OK [http://localhost/gateways/row/2?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing GatewaysController#edit (for 127.0.0.1 at 2009-02-09 18:30:14) [GET]
+  Parameters: {"action"=>"edit", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "adapter"=>"_list_inline_adapter", "id"=>"2", "controller"=>"gateways"}
+  [4;36;1mGateway Load (1.1ms)[0m   [0;1mSELECT * FROM "gateways" WHERE ("gateways"."id" = 2) [0m
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.3ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.3ms)
+Rendered _form (29.6ms)
+Rendered _update_form (39.4ms)
+Rendering _list_inline_adapter
+Rendered _messages (0.7ms)
+Rendered _list_inline_adapter (7.1ms)
+Completed in 67ms (View: 8, DB: 0) | 200 OK [http://localhost/gateways/2/edit?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b&adapter=_list_inline_adapter]
+
+
+Processing GatewaysController#update (for 127.0.0.1 at 2009-02-09 18:30:16) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "id"=>"2", "controller"=>"gateways", "record"=>{"flags"=>"", "ip_addr"=>"adasdasdasd", "grp_id"=>"", "tag"=>"", "port"=>"", "strip"=>"", "uri_scheme"=>"1", "gw_name"=>"teste2", "transport"=>""}}
+  [4;35;1mGateway Load (1.4ms)[0m   [0mSELECT * FROM "gateways" WHERE ("gateways"."id" = 2) [0m
+Rendering gateways/update.rjs
+Completed in 24ms (View: 4, DB: 1) | 200 OK [http://localhost/gateways/2?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing GatewaysController#row (for 127.0.0.1 at 2009-02-09 18:30:16) [GET]
+  Parameters: {"action"=>"row", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "id"=>"2", "controller"=>"gateways"}
+  [4;36;1mGateway Load (1.2ms)[0m   [0;1mSELECT * FROM "gateways" WHERE ("gateways"."id" = 2) [0m
+Rendered _list_actions (4.0ms)
+Rendered _list_record (13.7ms)
+Completed in 31ms (View: 19, DB: 1) | 200 OK [http://localhost/gateways/row/2?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing GatewaysController#edit (for 127.0.0.1 at 2009-02-09 18:30:18) [GET]
+  Parameters: {"action"=>"edit", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "adapter"=>"_list_inline_adapter", "id"=>"1", "controller"=>"gateways"}
+  [4;35;1mGateway Load (1.1ms)[0m   [0mSELECT * FROM "gateways" WHERE ("gateways"."id" = 1) [0m
+Rendered _form_attribute (1.3ms)
+Rendered _form_attribute (1.3ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.3ms)
+Rendered _form (30.0ms)
+Rendered _update_form (40.0ms)
+Rendering _list_inline_adapter
+Rendered _messages (0.6ms)
+Rendered _list_inline_adapter (7.0ms)
+Completed in 67ms (View: 8, DB: 0) | 200 OK [http://localhost/gateways/1/edit?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b&adapter=_list_inline_adapter]
+
+
+Processing GatewaysController#update (for 127.0.0.1 at 2009-02-09 18:30:22) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "id"=>"1", "controller"=>"gateways", "record"=>{"flags"=>"", "ip_addr"=>"123123123", "grp_id"=>"", "tag"=>"", "port"=>"", "strip"=>"", "uri_scheme"=>"1", "gw_name"=>"teste", "transport"=>""}}
+  [4;36;1mGateway Load (1.1ms)[0m   [0;1mSELECT * FROM "gateways" WHERE ("gateways"."id" = 1) [0m
+  [4;35;1mGateway Update (1.0ms)[0m   [0mUPDATE "gateways" SET "transport" = NULL, "updated_at" = '2009-02-09 20:30:22' WHERE "id" = 1[0m
+Rendering gateways/update.rjs
+Completed in 38ms (View: 4, DB: 2) | 200 OK [http://localhost/gateways/1?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing GatewaysController#row (for 127.0.0.1 at 2009-02-09 18:30:22) [GET]
+  Parameters: {"action"=>"row", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "id"=>"1", "controller"=>"gateways"}
+  [4;36;1mGateway Load (1.1ms)[0m   [0;1mSELECT * FROM "gateways" WHERE ("gateways"."id" = 1) [0m
+Rendered _list_actions (3.9ms)
+Rendered _list_record (22.9ms)
+Completed in 41ms (View: 30, DB: 1) | 200 OK [http://localhost/gateways/row/1?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing GatewaysController#edit (for 127.0.0.1 at 2009-02-09 18:30:24) [GET]
+  Parameters: {"action"=>"edit", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "adapter"=>"_list_inline_adapter", "id"=>"1", "controller"=>"gateways"}
+  [4;35;1mGateway Load (1.0ms)[0m   [0mSELECT * FROM "gateways" WHERE ("gateways"."id" = 1) [0m
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form (200.6ms)
+Rendered _update_form (210.3ms)
+Rendering _list_inline_adapter
+Rendered _messages (0.7ms)
+Rendered _list_inline_adapter (7.6ms)
+Completed in 237ms (View: 8, DB: 0) | 200 OK [http://localhost/gateways/1/edit?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b&adapter=_list_inline_adapter]
+
+
+Processing GatewaysController#update (for 127.0.0.1 at 2009-02-09 18:30:26) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "id"=>"1", "controller"=>"gateways", "record"=>{"flags"=>"", "ip_addr"=>"123123123", "grp_id"=>"", "tag"=>"", "port"=>"", "strip"=>"", "uri_scheme"=>"1", "gw_name"=>"teste", "transport"=>""}}
+  [4;36;1mGateway Load (1.3ms)[0m   [0;1mSELECT * FROM "gateways" WHERE ("gateways"."id" = 1) [0m
+Rendering gateways/update.rjs
+Completed in 24ms (View: 4, DB: 1) | 200 OK [http://localhost/gateways/1?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing GatewaysController#row (for 127.0.0.1 at 2009-02-09 18:30:26) [GET]
+  Parameters: {"action"=>"row", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "id"=>"1", "controller"=>"gateways"}
+  [4;35;1mGateway Load (1.1ms)[0m   [0mSELECT * FROM "gateways" WHERE ("gateways"."id" = 1) [0m
+Rendered _list_actions (3.9ms)
+Rendered _list_record (14.4ms)
+Completed in 32ms (View: 20, DB: 1) | 200 OK [http://localhost/gateways/row/1?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing GatewaysController#edit (for 127.0.0.1 at 2009-02-09 18:30:28) [GET]
+  Parameters: {"action"=>"edit", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "adapter"=>"_list_inline_adapter", "id"=>"2", "controller"=>"gateways"}
+  [4;36;1mGateway Load (1.0ms)[0m   [0;1mSELECT * FROM "gateways" WHERE ("gateways"."id" = 2) [0m
+Rendered _form_attribute (1.4ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.5ms)
+Rendered _form_attribute (1.3ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.5ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form (32.4ms)
+Rendered _update_form (44.3ms)
+Rendering _list_inline_adapter
+Rendered _messages (0.7ms)
+Rendered _list_inline_adapter (9.2ms)
+Completed in 74ms (View: 10, DB: 0) | 200 OK [http://localhost/gateways/2/edit?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b&adapter=_list_inline_adapter]
+
+
+Processing GatewaysController#update (for 127.0.0.1 at 2009-02-09 18:30:31) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "id"=>"2", "controller"=>"gateways", "record"=>{"flags"=>"", "ip_addr"=>"adasdasdasd", "grp_id"=>"", "tag"=>"", "port"=>"", "strip"=>"", "uri_scheme"=>"1", "gw_name"=>"teste2", "transport"=>"1"}}
+  [4;35;1mGateway Load (1.2ms)[0m   [0mSELECT * FROM "gateways" WHERE ("gateways"."id" = 2) [0m
+  [4;36;1mGateway Update (1.1ms)[0m   [0;1mUPDATE "gateways" SET "transport" = 1, "updated_at" = '2009-02-09 20:30:31' WHERE "id" = 2[0m
+Rendering gateways/update.rjs
+Completed in 41ms (View: 4, DB: 2) | 200 OK [http://localhost/gateways/2?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing GatewaysController#row (for 127.0.0.1 at 2009-02-09 18:30:31) [GET]
+  Parameters: {"action"=>"row", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "id"=>"2", "controller"=>"gateways"}
+  [4;35;1mGateway Load (1.1ms)[0m   [0mSELECT * FROM "gateways" WHERE ("gateways"."id" = 2) [0m
+Rendered _list_actions (3.9ms)
+Rendered _list_record (15.2ms)
+Completed in 34ms (View: 21, DB: 1) | 200 OK [http://localhost/gateways/row/2?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing GatewaysController#edit (for 127.0.0.1 at 2009-02-09 18:30:33) [GET]
+  Parameters: {"action"=>"edit", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "adapter"=>"_list_inline_adapter", "id"=>"2", "controller"=>"gateways"}
+  [4;36;1mGateway Load (1.0ms)[0m   [0;1mSELECT * FROM "gateways" WHERE ("gateways"."id" = 2) [0m
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.1ms)
+Rendered _form (28.7ms)
+Rendered _update_form (38.4ms)
+Rendering _list_inline_adapter
+Rendered _messages (0.9ms)
+Rendered _list_inline_adapter (7.7ms)
+Completed in 65ms (View: 8, DB: 0) | 200 OK [http://localhost/gateways/2/edit?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b&adapter=_list_inline_adapter]
+
+
+Processing GatewaysController#row (for 127.0.0.1 at 2009-02-09 18:30:36) [GET]
+  Parameters: {"action"=>"row", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "id"=>"2", "controller"=>"gateways"}
+  [4;35;1mGateway Load (1.1ms)[0m   [0mSELECT * FROM "gateways" WHERE ("gateways"."id" = 2) [0m
+Rendered _list_actions (3.8ms)
+Rendered _list_record (13.8ms)
+Completed in 31ms (View: 19, DB: 1) | 200 OK [http://localhost/gateways/row/2?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+  [4;36;1mSQL (2.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDomains (20090119015603)
+Migrating to CreateSubscribers (20090119025010)
+Migrating to CreateDbAliases (20090201194455)
+Migrating to CreateGateways (20090209182720)
+Migrating to CreateRoutes (20090209203236)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mCREATE TABLE "routes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "prefix" varchar(255), "from_uri" varchar(255), "grp_id" integer, "priority" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090209203236')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("aliases")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("db_aliases")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("domain")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("gateways")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("routes")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("subscriber")[0m
+
+
+Processing SubscribersController#index (for 127.0.0.1 at 2009-02-09 18:36:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subscribers"}
+  [4;36;1mSQL (3.1ms)[0m   [0;1mSELECT COUNT(*) AS count_all FROM (SELECT DISTINCT "subscriber".id FROM "subscriber" LEFT OUTER JOIN "domain" ON "domain".id = "subscriber".domain ) count_all_subquery[0m
+  [4;35;1mSubscriber Load (1.4ms)[0m   [0mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mDomain Load (0.9ms)[0m   [0;1mSELECT * FROM "domain" WHERE ("domain"."name" = 'newdomain') LIMIT 1[0m
+  [4;35;1mDomain Load (0.8ms)[0m   [0mSELECT * FROM "domain" WHERE ("domain"."name" = 'example.com') LIMIT 1[0m
+  [4;36;1mDomain Load (1.3ms)[0m   [0;1mSELECT * FROM "domain" WHERE ("domain"."id" IN (0,0)) [0m
+Rendering template within layouts/default
+Rendering subscribers/list
+
+
+ActionView::TemplateError (No route matches {:action=>"show_search", :controller=>"subscribers", :_method=>:get}) on line #6 of vendor/plugins/active_scaffold/frontends/default/views/_list_header.rhtml:
+3:     <% new_params = params_for(:action => :table) %>
+4:     <% active_scaffold_config.action_links.each :table do |link| -%>
+5:       <% next if controller.respond_to? link.security_method and !controller.send(link.security_method) -%>
+6:       <%= render_action_link(link, new_params) -%>
+7:     <% end -%>
+8: 
+9:     <%= loading_indicator_tag(:action => :table) %>
+
+    vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:370:in `generate_without_nil_id_awareness'
+    vendor/plugins/active_scaffold/lib/extensions/nil_id_in_url_params.rb:4:in `generate'
+    vendor/rails/actionpack/lib/action_controller/url_rewriter.rb:208:in `rewrite_path'
+    vendor/rails/actionpack/lib/action_controller/url_rewriter.rb:187:in `rewrite_url'
+    vendor/rails/actionpack/lib/action_controller/url_rewriter.rb:165:in `rewrite'
+    vendor/rails/actionpack/lib/action_controller/base.rb:626:in `url_for'
+    vendor/rails/actionpack/lib/action_view/helpers/url_helper.rb:85:in `send'
+    vendor/rails/actionpack/lib/action_view/helpers/url_helper.rb:85:in `url_for'
+    vendor/rails/actionpack/lib/action_view/helpers/url_helper.rb:228:in `link_to'
+    vendor/plugins/active_scaffold/lib/active_scaffold/helpers/view_helpers.rb:177:in `render_action_link'
+    vendor/plugins/active_scaffold/frontends/default/views/_list_header.rhtml:6
+    vendor/plugins/active_scaffold/lib/active_scaffold/data_structures/action_links.rb:33:in `each'
+    vendor/plugins/active_scaffold/lib/active_scaffold/data_structures/action_links.rb:31:in `each'
+    vendor/plugins/active_scaffold/frontends/default/views/_list_header.rhtml:4
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render_without_active_scaffold'
+    vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+    vendor/plugins/active_scaffold/frontends/default/views/list.rhtml:3
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render_without_active_scaffold'
+    vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render_without_active_scaffold'
+    vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render_without_active_scaffold'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render_without_active_scaffold'
+    vendor/plugins/active_scaffold/lib/extensions/action_controller_rendering.rb:13:in `render'
+    vendor/plugins/active_scaffold/lib/active_scaffold/actions/list.rb:37:in `list'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    vendor/plugins/active_scaffold/lib/active_scaffold/actions/list.rb:35:in `list'
+    vendor/plugins/active_scaffold/lib/active_scaffold/actions/list.rb:8:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (117.5ms)
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (8.5ms)
+Rendering /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing SubscribersController#index (for 127.0.0.1 at 2009-02-09 18:37:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subscribers"}
+  [4;35;1mSQL (2.4ms)[0m   [0mSELECT COUNT(*) AS count_all FROM (SELECT DISTINCT "subscriber".id FROM "subscriber" LEFT OUTER JOIN "domain" ON "domain".id = "subscriber".domain ) count_all_subquery[0m
+  [4;36;1mSubscriber Load (1.2ms)[0m   [0;1mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domain" WHERE ("domain"."name" = 'newdomain') LIMIT 1[0m
+  [4;36;1mDomain Load (0.8ms)[0m   [0;1mSELECT * FROM "domain" WHERE ("domain"."name" = 'example.com') LIMIT 1[0m
+  [4;35;1mDomain Load (2.0ms)[0m   [0mSELECT * FROM "domain" WHERE ("domain"."id" IN (0,0)) [0m
+Rendering template within layouts/default
+Rendering subscribers/list
+Rendered _list_header (4.6ms)
+Rendered _list_column_headings (11.8ms)
+Rendered _messages (0.6ms)
+Rendered _list_actions (5.3ms)
+Rendered _list_record (16.8ms)
+Rendered _list_actions (3.1ms)
+Rendered _list_record (10.1ms)
+Rendered _list (54.5ms)
+Completed in 170ms (View: 90, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing SubscribersController#index (for 127.0.0.1 at 2009-02-09 18:37:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subscribers"}
+  [4;36;1mSQL (2.4ms)[0m   [0;1mSELECT COUNT(*) AS count_all FROM (SELECT DISTINCT "subscriber".id FROM "subscriber" LEFT OUTER JOIN "domain" ON "domain".id = "subscriber".domain ) count_all_subquery[0m
+  [4;35;1mSubscriber Load (1.4ms)[0m   [0mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mDomain Load (0.8ms)[0m   [0;1mSELECT * FROM "domain" WHERE ("domain"."name" = 'newdomain') LIMIT 1[0m
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domain" WHERE ("domain"."name" = 'example.com') LIMIT 1[0m
+  [4;36;1mDomain Load (1.4ms)[0m   [0;1mSELECT * FROM "domain" WHERE ("domain"."id" IN (0,0)) [0m
+Rendering template within layouts/default
+Rendering subscribers/list
+Rendered _list_header (3.0ms)
+Rendered _list_column_headings (10.7ms)
+Rendered _messages (0.6ms)
+Rendered _list_actions (3.2ms)
+Rendered _list_record (14.0ms)
+Rendered _list_actions (3.3ms)
+Rendered _list_record (11.3ms)
+Rendered _list (52.6ms)
+Completed in 164ms (View: 83, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing RoutesController#index (for 127.0.0.1 at 2009-02-09 18:37:38) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"routes"}
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM "routes" [0m
+  [4;36;1mRoute Load (0.5ms)[0m   [0;1mSELECT "routes".* FROM "routes" ORDER BY routes."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "routes".* FROM "routes" ORDER BY routes."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering routes/list
+Rendered _list_header (4.6ms)
+Rendered _list_column_headings (10.6ms)
+Rendered _messages (0.6ms)
+Rendered _list (21.3ms)
+Completed in 58ms (View: 41, DB: 1) | 200 OK [http://localhost/routes?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing RoutesController#new (for 127.0.0.1 at 2009-02-09 18:37:40) [GET]
+  Parameters: {"action"=>"new", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "adapter"=>"_list_inline_adapter", "controller"=>"routes"}
+Rendered _form_attribute (1.4ms)
+Rendered _form_attribute (1.4ms)
+Rendered _form_attribute (2.0ms)
+Rendered _form_attribute (1.3ms)
+Rendered _form (20.5ms)
+Rendered _create_form (33.6ms)
+Rendering _list_inline_adapter
+Rendered _messages (0.8ms)
+Rendered _list_inline_adapter (16.1ms)
+Completed in 69ms (View: 17, DB: 0) | 200 OK [http://localhost/routes/new?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b&adapter=_list_inline_adapter]
+
+
+Processing RoutesController#create (for 127.0.0.1 at 2009-02-09 18:37:47) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"routes", "record"=>{"prefix"=>" ", "from_uri"=>"", "grp_id"=>"1", "priority"=>"1"}}
+Rendering routes/create.rjs
+Rendered _form_attribute (1.4ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.5ms)
+Rendered _form_attribute (1.4ms)
+Rendered _form (18.8ms)
+Rendered _create_form (29.4ms)
+Completed in 61ms (View: 43, DB: 0) | 200 OK [http://localhost/routes?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing SubscribersController#index (for 127.0.0.1 at 2009-02-09 18:38:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subscribers"}
+  [4;36;1mSQL (2.6ms)[0m   [0;1mSELECT COUNT(*) AS count_all FROM (SELECT DISTINCT "subscriber".id FROM "subscriber" LEFT OUTER JOIN "domain" ON "domain".id = "subscriber".domain ) count_all_subquery[0m
+  [4;35;1mSubscriber Load (1.2ms)[0m   [0mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mDomain Load (0.9ms)[0m   [0;1mSELECT * FROM "domain" WHERE ("domain"."name" = 'newdomain') LIMIT 1[0m
+  [4;35;1mDomain Load (0.7ms)[0m   [0mSELECT * FROM "domain" WHERE ("domain"."name" = 'example.com') LIMIT 1[0m
+  [4;36;1mDomain Load (1.9ms)[0m   [0;1mSELECT * FROM "domain" WHERE ("domain"."id" IN (0,0)) [0m
+Rendering template within layouts/default
+Rendering subscribers/list
+Rendered _list_header (3.0ms)
+Rendered _list_column_headings (10.4ms)
+Rendered _messages (0.6ms)
+Rendered _list_actions (3.4ms)
+Rendered _list_record (13.4ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (10.2ms)
+Rendered _list (49.9ms)
+Completed in 315ms (View: 236, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing RoutesController#index (for 127.0.0.1 at 2009-02-09 18:38:47) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"routes"}
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "routes" [0m
+  [4;36;1mRoute Load (0.6ms)[0m   [0;1mSELECT "routes".* FROM "routes" ORDER BY routes."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "routes".* FROM "routes" ORDER BY routes."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering routes/list
+Rendered _list_header (3.3ms)
+Rendered _list_column_headings (9.2ms)
+Rendered _messages (0.6ms)
+Rendered _list (20.3ms)
+Completed in 56ms (View: 39, DB: 1) | 200 OK [http://localhost/routes?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing RoutesController#new (for 127.0.0.1 at 2009-02-09 18:38:49) [GET]
+  Parameters: {"action"=>"new", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "adapter"=>"_list_inline_adapter", "controller"=>"routes"}
+Rendered _form_attribute (1.3ms)
+Rendered _form_attribute (1.8ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.5ms)
+Rendered _form (21.7ms)
+Rendered _create_form (33.2ms)
+Rendering _list_inline_adapter
+Rendered _messages (0.7ms)
+Rendered _list_inline_adapter (8.1ms)
+Completed in 60ms (View: 9, DB: 0) | 200 OK [http://localhost/routes/new?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b&adapter=_list_inline_adapter]
+
+
+Processing RoutesController#create (for 127.0.0.1 at 2009-02-09 18:38:52) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"routes", "record"=>{"prefix"=>"", "from_uri"=>"", "grp_id"=>"1", "priority"=>"1"}}
+  [4;36;1mRoute Create (1.0ms)[0m   [0;1mINSERT INTO "routes" ("prefix", "from_uri", "updated_at", "grp_id", "priority", "created_at") VALUES(NULL, NULL, '2009-02-09 20:38:52', 1, 1, '2009-02-09 20:38:52')[0m
+Rendering routes/create.rjs
+Rendered _list_actions (7.7ms)
+Rendered _list_record (20.4ms)
+Completed in 60ms (View: 30, DB: 1) | 200 OK [http://localhost/routes?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing RoutesController#index (for 127.0.0.1 at 2009-02-09 18:39:45) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"routes"}
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "routes" [0m
+  [4;36;1mRoute Load (1.1ms)[0m   [0;1mSELECT "routes".* FROM "routes" ORDER BY routes."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering routes/list
+Rendered _list_header (3.1ms)
+Rendered _list_column_headings (9.3ms)
+Rendered _messages (0.8ms)
+Rendered _list_actions (3.3ms)
+Rendered _list_record (11.6ms)
+Rendered _list (36.8ms)
+Completed in 75ms (View: 57, DB: 2) | 200 OK [http://localhost/routes?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing SubscribersController#index (for 127.0.0.1 at 2009-02-09 18:39:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subscribers"}
+  [4;35;1mSQL (2.4ms)[0m   [0mSELECT COUNT(*) AS count_all FROM (SELECT DISTINCT "subscriber".id FROM "subscriber" LEFT OUTER JOIN "domain" ON "domain".id = "subscriber".domain ) count_all_subquery[0m
+  [4;36;1mSubscriber Load (1.3ms)[0m   [0;1mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mDomain Load (0.8ms)[0m   [0mSELECT * FROM "domain" WHERE ("domain"."name" = 'newdomain') LIMIT 1[0m
+  [4;36;1mDomain Load (0.7ms)[0m   [0;1mSELECT * FROM "domain" WHERE ("domain"."name" = 'example.com') LIMIT 1[0m
+  [4;35;1mDomain Load (3.4ms)[0m   [0mSELECT * FROM "domain" WHERE ("domain"."id" IN (0,0)) [0m
+Rendering template within layouts/default
+Rendering subscribers/list
+Rendered _list_header (3.0ms)
+Rendered _list_column_headings (10.5ms)
+Rendered _messages (0.6ms)
+Rendered _list_actions (3.5ms)
+Rendered _list_record (13.8ms)
+Rendered _list_actions (3.0ms)
+Rendered _list_record (9.9ms)
+Rendered _list (51.0ms)
+Completed in 174ms (View: 83, DB: 8) | 200 OK [http://localhost/]
+
+
+Processing RoutesController#index (for 127.0.0.1 at 2009-02-09 18:39:50) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"routes"}
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "routes" [0m
+  [4;35;1mRoute Load (0.9ms)[0m   [0mSELECT "routes".* FROM "routes" ORDER BY routes."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering routes/list
+Rendered _list_header (3.4ms)
+Rendered _list_column_headings (9.2ms)
+Rendered _messages (0.8ms)
+Rendered _list_actions (3.4ms)
+Rendered _list_record (13.3ms)
+Rendered _list (38.7ms)
+Completed in 74ms (View: 58, DB: 2) | 200 OK [http://localhost/routes?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing RoutesController#index (for 127.0.0.1 at 2009-02-09 18:39:51) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"routes"}
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "routes" [0m
+  [4;35;1mRoute Load (1.0ms)[0m   [0mSELECT "routes".* FROM "routes" ORDER BY routes."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering routes/list
+Rendered _list_header (4.0ms)
+Rendered _list_column_headings (12.1ms)
+Rendered _messages (0.8ms)
+Rendered _list_actions (3.7ms)
+Rendered _list_record (12.1ms)
+Rendered _list (41.3ms)
+Completed in 83ms (View: 64, DB: 4) | 200 OK [http://localhost/routes?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing RoutesController#index (for 127.0.0.1 at 2009-02-09 18:43:24) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"routes"}
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM "routes" [0m
+  [4;35;1mRoute Load (0.9ms)[0m   [0mSELECT "routes".* FROM "routes" ORDER BY routes."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering routes/list
+Rendered _list_header (3.4ms)
+Rendered _list_column_headings (8.9ms)
+Rendered _messages (0.6ms)
+
+
+ActionView::TemplateError (undefined local variable or method `prefix' for #<ActionView::Base:0x2158428>) on line #11 of vendor/plugins/active_scaffold/frontends/default/views/_list_record.rhtml:
+8: 
+9: <tr class="record <%= tr_class %>" id="<%= element_row_id(:action => :list, :id => record.id) %>">
+10:   <% active_scaffold_config.list.columns.each do |column| %>
+11:     <% column_value = get_column_value(record, column) -%>
+12: 
+13:     <td class="<%= column_class(column, column_value) %>" >
+14:       <%= render_list_column(column_value, column, record) %>
+
+    app/helpers/routes_helper.rb:4:in `prefix_column'
+    vendor/plugins/active_scaffold/lib/active_scaffold/helpers/list_column_helpers.rb:11:in `send'
+    vendor/plugins/active_scaffold/lib/active_scaffold/helpers/list_column_helpers.rb:11:in `get_column_value'
+    vendor/plugins/active_scaffold/frontends/default/views/_list_record.rhtml:11
+    vendor/plugins/active_scaffold/lib/active_scaffold/data_structures/action_columns.rb:69:in `each'
+    vendor/plugins/active_scaffold/lib/active_scaffold/data_structures/action_columns.rb:56:in `each'
+    vendor/plugins/active_scaffold/frontends/default/views/_list_record.rhtml:10
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/partials.rb:184:in `render_partial_collection'
+    vendor/rails/actionpack/lib/action_view/partials.rb:179:in `map'
+    vendor/rails/actionpack/lib/action_view/partials.rb:179:in `render_partial_collection'
+    vendor/rails/actionpack/lib/action_view/partials.rb:150:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render_without_active_scaffold'
+    vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+    vendor/plugins/active_scaffold/frontends/default/views/_list.rhtml:24
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render_without_active_scaffold'
+    vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+    vendor/plugins/active_scaffold/frontends/default/views/list.rhtml:9
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render_without_active_scaffold'
+    vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render_without_active_scaffold'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render_without_active_scaffold'
+    vendor/plugins/active_scaffold/lib/extensions/action_controller_rendering.rb:13:in `render'
+    vendor/plugins/active_scaffold/lib/active_scaffold/actions/list.rb:39:in `list'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    vendor/plugins/active_scaffold/lib/active_scaffold/actions/list.rb:35:in `list'
+    vendor/plugins/active_scaffold/lib/active_scaffold/actions/list.rb:8:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (119.2ms)
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (13.3ms)
+Rendering /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing SubscribersController#index (for 127.0.0.1 at 2009-02-09 18:43:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subscribers"}
+  [4;36;1mSQL (2.6ms)[0m   [0;1mSELECT COUNT(*) AS count_all FROM (SELECT DISTINCT "subscriber".id FROM "subscriber" LEFT OUTER JOIN "domain" ON "domain".id = "subscriber".domain ) count_all_subquery[0m
+  [4;35;1mSubscriber Load (1.3ms)[0m   [0mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mDomain Load (0.8ms)[0m   [0;1mSELECT * FROM "domain" WHERE ("domain"."name" = 'newdomain') LIMIT 1[0m
+  [4;35;1mDomain Load (0.8ms)[0m   [0mSELECT * FROM "domain" WHERE ("domain"."name" = 'example.com') LIMIT 1[0m
+  [4;36;1mDomain Load (2.0ms)[0m   [0;1mSELECT * FROM "domain" WHERE ("domain"."id" IN (0,0)) [0m
+Rendering template within layouts/default
+Rendering subscribers/list
+Rendered _list_header (3.0ms)
+Rendered _list_column_headings (10.4ms)
+Rendered _messages (0.6ms)
+Rendered _list_actions (3.3ms)
+Rendered _list_record (13.7ms)
+Rendered _list_actions (3.2ms)
+Rendered _list_record (10.5ms)
+Rendered _list (51.3ms)
+Completed in 167ms (View: 83, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing RoutesController#index (for 127.0.0.1 at 2009-02-09 18:43:43) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"routes"}
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "routes" [0m
+  [4;36;1mRoute Load (0.9ms)[0m   [0;1mSELECT "routes".* FROM "routes" ORDER BY routes."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering routes/list
+Rendered _list_header (3.6ms)
+Rendered _list_column_headings (9.6ms)
+Rendered _messages (0.6ms)
+Rendered _list_actions (4.5ms)
+Rendered _list_record (12.9ms)
+Rendered _list (38.0ms)
+Completed in 74ms (View: 57, DB: 1) | 200 OK [http://localhost/routes?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing RoutesController#index (for 127.0.0.1 at 2009-02-09 18:43:45) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"routes"}
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "routes" [0m
+  [4;36;1mRoute Load (0.9ms)[0m   [0;1mSELECT "routes".* FROM "routes" ORDER BY routes."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering routes/list
+Rendered _list_header (3.2ms)
+Rendered _list_column_headings (9.8ms)
+Rendered _messages (0.7ms)
+Rendered _list_actions (3.8ms)
+Rendered _list_record (13.5ms)
+Rendered _list (42.4ms)
+Completed in 233ms (View: 62, DB: 2) | 200 OK [http://localhost/routes?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing SubscribersController#index (for 127.0.0.1 at 2009-02-09 18:43:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subscribers"}
+  [4;35;1mSQL (4.3ms)[0m   [0mSELECT COUNT(*) AS count_all FROM (SELECT DISTINCT "subscriber".id FROM "subscriber" LEFT OUTER JOIN "domain" ON "domain".id = "subscriber".domain ) count_all_subquery[0m
+  [4;36;1mSubscriber Load (1.3ms)[0m   [0;1mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mDomain Load (0.8ms)[0m   [0mSELECT * FROM "domain" WHERE ("domain"."name" = 'newdomain') LIMIT 1[0m
+  [4;36;1mDomain Load (1.0ms)[0m   [0;1mSELECT * FROM "domain" WHERE ("domain"."name" = 'example.com') LIMIT 1[0m
+  [4;35;1mDomain Load (1.4ms)[0m   [0mSELECT * FROM "domain" WHERE ("domain"."id" IN (0,0)) [0m
+Rendering template within layouts/default
+Rendering subscribers/list
+Rendered _list_header (3.1ms)
+Rendered _list_column_headings (10.6ms)
+Rendered _messages (0.6ms)
+Rendered _list_actions (3.4ms)
+Rendered _list_record (13.6ms)
+Rendered _list_actions (3.2ms)
+Rendered _list_record (10.3ms)
+Rendered _list (50.6ms)
+Completed in 174ms (View: 93, DB: 9) | 200 OK [http://localhost/]
+
+
+Processing RoutesController#index (for 127.0.0.1 at 2009-02-09 18:43:57) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"routes"}
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "routes" [0m
+  [4;35;1mRoute Load (1.0ms)[0m   [0mSELECT "routes".* FROM "routes" ORDER BY routes."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering routes/list
+Rendered _list_header (3.1ms)
+Rendered _list_column_headings (160.8ms)
+Rendered _messages (0.7ms)
+Rendered _list_actions (3.5ms)
+Rendered _list_record (12.0ms)
+Rendered _list (189.1ms)
+Completed in 224ms (View: 208, DB: 2) | 200 OK [http://localhost/routes?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing RoutesController#new (for 127.0.0.1 at 2009-02-09 18:45:21) [GET]
+  Parameters: {"action"=>"new", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "adapter"=>"_list_inline_adapter", "controller"=>"routes"}
+Rendered _form_attribute (1.4ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form_attribute (1.2ms)
+Rendered _form (15.5ms)
+Rendered _create_form (25.3ms)
+Rendering _list_inline_adapter
+Rendered _messages (0.6ms)
+Rendered _list_inline_adapter (7.3ms)
+Completed in 50ms (View: 8, DB: 0) | 200 OK [http://localhost/routes/new?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b&adapter=_list_inline_adapter]
+
+
+Processing RoutesController#create (for 127.0.0.1 at 2009-02-09 18:45:25) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"routes", "record"=>{"prefix"=>"", "from_uri"=>"", "grp_id"=>"1", "priority"=>"1"}}
+  [4;36;1mRoute Create (1.0ms)[0m   [0;1mINSERT INTO "routes" ("prefix", "from_uri", "updated_at", "grp_id", "priority", "created_at") VALUES(NULL, NULL, '2009-02-09 20:45:25', 1, 1, '2009-02-09 20:45:25')[0m
+Rendering routes/create.rjs
+Rendered _list_actions (3.9ms)
+Rendered _list_record (13.6ms)
+Completed in 53ms (View: 23, DB: 1) | 200 OK [http://localhost/routes?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing RoutesController#index (for 127.0.0.1 at 2009-02-09 18:48:45) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"routes"}
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM "routes" [0m
+  [4;35;1mRoute Load (1.6ms)[0m   [0mSELECT "routes".* FROM "routes" ORDER BY routes."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering routes/list
+Rendered _list_header (6.4ms)
+Rendered _list_column_headings (13.8ms)
+Rendered _messages (0.7ms)
+Rendered _list_actions (7.9ms)
+Rendered _list_record (19.8ms)
+Rendered _list_actions (4.8ms)
+Rendered _list_record (12.7ms)
+Rendered _list (67.6ms)
+Completed in 138ms (View: 95, DB: 2) | 200 OK [http://localhost/routes?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]
+
+
+Processing RoutesController#new (for 127.0.0.1 at 2009-02-09 18:48:47) [GET]
+  Parameters: {"action"=>"new", "_method"=>"get", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "adapter"=>"_list_inline_adapter", "controller"=>"routes"}
+Rendered _form_attribute (2.7ms)
+Rendered _form_attribute (1.6ms)
+Rendered _form_attribute (1.6ms)
+Rendered _form_attribute (1.4ms)
+Rendered _form (29.6ms)
+Rendered _create_form (45.7ms)
+Rendering _list_inline_adapter
+Rendered _messages (1.1ms)
+Rendered _list_inline_adapter (11.3ms)
+Completed in 92ms (View: 12, DB: 0) | 200 OK [http://localhost/routes/new?_method=get&authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b&adapter=_list_inline_adapter]
+
+
+Processing RoutesController#create (for 127.0.0.1 at 2009-02-09 18:48:49) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b", "controller"=>"routes", "record"=>{"prefix"=>"", "from_uri"=>"", "grp_id"=>"2", "priority"=>"2"}}
+  [4;36;1mRoute Create (1.4ms)[0m   [0;1mINSERT INTO "routes" ("prefix", "from_uri", "updated_at", "grp_id", "priority", "created_at") VALUES(NULL, NULL, '2009-02-09 20:49:13', 2, 2, '2009-02-09 20:49:13')[0m
+Rendering routes/create.rjs
+Rendered _list_actions (5.4ms)
+Rendered _list_record (18.3ms)
+Completed in 24049ms (View: 30, DB: 1) | 200 OK [http://localhost/routes?authenticity_token=34cc28c95b33cb0411dfcc23a0e746c4c82e0c4b]

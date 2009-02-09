@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090201194455) do
+ActiveRecord::Schema.define(:version => 20090209203236) do
 
   create_table "aliases", :force => true do |t|
     t.string   "username"
@@ -31,6 +31,29 @@ ActiveRecord::Schema.define(:version => 20090201194455) do
 
   create_table "domain", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gateways", :force => true do |t|
+    t.string   "gw_name"
+    t.integer  "grp_id"
+    t.string   "ip_addr"
+    t.integer  "port"
+    t.integer  "uri_scheme"
+    t.integer  "transport"
+    t.integer  "strip"
+    t.string   "tag"
+    t.integer  "flags"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "routes", :force => true do |t|
+    t.string   "prefix"
+    t.string   "from_uri"
+    t.integer  "grp_id"
+    t.integer  "priority"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

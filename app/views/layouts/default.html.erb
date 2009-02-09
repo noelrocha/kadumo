@@ -29,6 +29,12 @@
 		<td><b> | <%= link_to_remote "Domains", :url => domains_url, 
 					:update => "page_content", :loading => "loading('page_content','Domains')", 
 					:method => :get %> | </b></td>
+		<td><b> | <%= link_to_remote "LCR Gateways", :url => gateways_url, 
+					:update => "page_content", :loading => "loading('page_content','LCR Gateways')", 
+					:method => :get %> | </b></td>	
+		<td><b> | <%= link_to_remote "LCR Routes", :url => routes_url, 
+					:update => "page_content", :loading => "loading('page_content','LCR Routes')", 
+					:method => :get %> | </b></td>				
 	</table>
 </div>
 
