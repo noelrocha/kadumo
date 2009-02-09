@@ -7,7 +7,7 @@ development:
   routes: lcr
   user_groups: grp
   dialogs: dialog
-  dbaliases: aliases
+  dbaliases: db_aliases
   user_preferences: usr_preferences
   trusted_hosts: trusted
   carrier_routes: carrierroute

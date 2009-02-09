@@ -9,9 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090126212136) do
+ActiveRecord::Schema.define(:version => 20090201194455) do
 
   create_table "aliases", :force => true do |t|
+    t.string   "username"
+    t.string   "domain"
+    t.string   "alias_username"
+    t.string   "alias_domain"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "db_aliases", :force => true do |t|
     t.string   "username"
     t.string   "domain"
     t.string   "alias_username"

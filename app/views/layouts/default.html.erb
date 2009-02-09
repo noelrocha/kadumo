@@ -20,6 +20,12 @@
 
 <div style="text-align: center;">
 	<table style="margin-left: auto; margin-right: auto;">
+		<td><b> | <%= link_to_remote "Subscribers", :url => subscribers_url, 
+					:update => "page_content", :loading => "loading('page_content','Subscribers')", 
+					:method => :get %> | </b></td>
+		<td><b> | <%= link_to_remote "DB Aliases", :url => db_aliases_url, 
+					:update => "page_content", :loading => "loading('page_content','DB Aliases')", 
+					:method => :get %> | </b></td>
 		<td><b> | <%= link_to_remote "Domains", :url => domains_url, 
 					:update => "page_content", :loading => "loading('page_content','Domains')", 
 					:method => :get %> | </b></td>

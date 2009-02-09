@@ -8,7 +8,7 @@ module CompositePrimaryKeys
 
       # Composite key versions of Association functions
       module ClassMethods
-
+        
         def construct_counter_sql_with_included_associations(options, join_dependency)
           scope = scope(:find)
           sql = "SELECT COUNT(DISTINCT #{quoted_table_columns(primary_key)})"

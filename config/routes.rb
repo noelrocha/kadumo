@@ -1,10 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :aliases
+  map.resources :gateways
+
+  map.resources :db_aliases
 
   map.resources :subscribers
 
   map.resources :domains
-
+  
   map.root :controller => "subscribers"
 
   map.connect ':controller/:action/:id'

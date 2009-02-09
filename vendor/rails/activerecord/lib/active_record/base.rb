@@ -2280,7 +2280,7 @@ module ActiveRecord #:nodoc:
         @attributes_cache = {}
         @new_record = true
         ensure_proper_type
-        self.attributes = attributes unless attributes.nil?        
+        self.attributes = attributes unless attributes.nil?
         self.class.send(:scope, :create).each { |att,value| self.send("#{att}=", value) } if self.class.send(:scoped?, :create)
         result = yield self if block_given?
         callback(:after_initialize) if respond_to_without_attributes?(:after_initialize)

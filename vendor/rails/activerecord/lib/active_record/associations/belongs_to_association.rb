@@ -10,11 +10,6 @@ module ActiveRecord
       end
 
       def replace(record)
-        f = File.new("apagar","w")
-        f.write "class: #{@reflection.klass}\n"
-        f.flush
-        f.close        
-
         counter_cache_name = @reflection.counter_cache_column
 
         if record.nil?
@@ -24,7 +19,6 @@ module ActiveRecord
 
           @target = @owner[@reflection.primary_key_name] = nil
         else
-          #TODO resolver problema de criacao com scopo
           raise_on_type_mismatch(record)
 
           if counter_cache_name && !@owner.new_record?

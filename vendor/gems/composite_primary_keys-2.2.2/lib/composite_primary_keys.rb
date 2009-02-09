@@ -45,7 +45,6 @@ require 'composite_primary_keys/attribute_methods'
 
 ActiveRecord::Base.class_eval do
   include CompositePrimaryKeys::ActiveRecord::Base
-#  include CompositePrimaryKeys::ActiveRecord::AttributeMethods
 end
 
 Dir[File.dirname(__FILE__) + '/composite_primary_keys/connection_adapters/*.rb'].each do |adapter|
