@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  src_ip: MyString
+  proto: MyString
+  from_pattern: MyString
+  tag: MyString
+
+two:
+  src_ip: MyString
+  proto: MyString
+  from_pattern: MyString
+  tag: MyString

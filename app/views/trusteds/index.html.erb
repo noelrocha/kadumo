@@ -1,0 +1,26 @@
+<h1>Listing trusteds</h1>
+
+<table>
+  <tr>
+    <th>Src ip</th>
+    <th>Proto</th>
+    <th>From pattern</th>
+    <th>Tag</th>
+  </tr>
+
+<% for trusted in @trusteds %>
+  <tr>
+    <td><%=h trusted.src_ip %></td>
+    <td><%=h trusted.proto %></td>
+    <td><%=h trusted.from_pattern %></td>
+    <td><%=h trusted.tag %></td>
+    <td><%= link_to 'Show', trusted %></td>
+    <td><%= link_to 'Edit', edit_trusted_path(trusted) %></td>
+    <td><%= link_to 'Destroy', trusted, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New trusted', new_trusted_path %>

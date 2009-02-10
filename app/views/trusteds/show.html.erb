@@ -1,0 +1,23 @@
+<p>
+  <b>Src ip:</b>
+  <%=h @trusted.src_ip %>
+</p>
+
+<p>
+  <b>Proto:</b>
+  <%=h @trusted.proto %>
+</p>
+
+<p>
+  <b>From pattern:</b>
+  <%=h @trusted.from_pattern %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%=h @trusted.tag %>
+</p>
+
+
+<%= link_to 'Edit', edit_trusted_path(@trusted) %> |
+<%= link_to 'Back', trusteds_path %>

@@ -1,0 +1,28 @@
+<h1>Editing trusted</h1>
+
+<% form_for(@trusted) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :src_ip %><br />
+    <%= f.text_field :src_ip %>
+  </p>
+  <p>
+    <%= f.label :proto %><br />
+    <%= f.text_field :proto %>
+  </p>
+  <p>
+    <%= f.label :from_pattern %><br />
+    <%= f.text_field :from_pattern %>
+  </p>
+  <p>
+    <%= f.label :tag %><br />
+    <%= f.text_field :tag %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @trusted %> |
+<%= link_to 'Back', trusteds_path %>
