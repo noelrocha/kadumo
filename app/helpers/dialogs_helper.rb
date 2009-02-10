@@ -1,0 +1,2 @@
+module DialogsHelper
+end

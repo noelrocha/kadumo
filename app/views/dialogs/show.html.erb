@@ -1,0 +1,93 @@
+<p>
+  <b>Hash entry:</b>
+  <%=h @dialog.hash_entry %>
+</p>
+
+<p>
+  <b>Hash:</b>
+  <%=h @dialog.hash_id %>
+</p>
+
+<p>
+  <b>Callid:</b>
+  <%=h @dialog.callid %>
+</p>
+
+<p>
+  <b>From uri:</b>
+  <%=h @dialog.from_uri %>
+</p>
+
+<p>
+  <b>From tag:</b>
+  <%=h @dialog.from_tag %>
+</p>
+
+<p>
+  <b>To uri:</b>
+  <%=h @dialog.to_uri %>
+</p>
+
+<p>
+  <b>To tag:</b>
+  <%=h @dialog.to_tag %>
+</p>
+
+<p>
+  <b>Caller cseq:</b>
+  <%=h @dialog.caller_cseq %>
+</p>
+
+<p>
+  <b>Callee cseq:</b>
+  <%=h @dialog.callee_cseq %>
+</p>
+
+<p>
+  <b>Caller route set:</b>
+  <%=h @dialog.caller_route_set %>
+</p>
+
+<p>
+  <b>Callee route set:</b>
+  <%=h @dialog.callee_route_set %>
+</p>
+
+<p>
+  <b>Caller contact:</b>
+  <%=h @dialog.caller_contact %>
+</p>
+
+<p>
+  <b>Callee contact:</b>
+  <%=h @dialog.callee_contact %>
+</p>
+
+<p>
+  <b>Caller sock:</b>
+  <%=h @dialog.caller_sock %>
+</p>
+
+<p>
+  <b>Callee sock:</b>
+  <%=h @dialog.callee_sock %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @dialog.state %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%=h @dialog.start_time %>
+</p>
+
+<p>
+  <b>Timeout:</b>
+  <%=h @dialog.timeout %>
+</p>
+
+
+<%= link_to 'Edit', edit_dialog_path(@dialog) %> |
+<%= link_to 'Back', dialogs_path %>

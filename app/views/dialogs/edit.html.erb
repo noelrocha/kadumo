@@ -1,0 +1,84 @@
+<h1>Editing dialog</h1>
+
+<% form_for(@dialog) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :hash_entry %><br />
+    <%= f.text_field :hash_entry %>
+  </p>
+  <p>
+    <%= f.label :hash_id %><br />
+    <%= f.text_field :hash_id %>
+  </p>
+  <p>
+    <%= f.label :callid %><br />
+    <%= f.text_field :callid %>
+  </p>
+  <p>
+    <%= f.label :from_uri %><br />
+    <%= f.text_field :from_uri %>
+  </p>
+  <p>
+    <%= f.label :from_tag %><br />
+    <%= f.text_field :from_tag %>
+  </p>
+  <p>
+    <%= f.label :to_uri %><br />
+    <%= f.text_field :to_uri %>
+  </p>
+  <p>
+    <%= f.label :to_tag %><br />
+    <%= f.text_field :to_tag %>
+  </p>
+  <p>
+    <%= f.label :caller_cseq %><br />
+    <%= f.text_field :caller_cseq %>
+  </p>
+  <p>
+    <%= f.label :callee_cseq %><br />
+    <%= f.text_field :callee_cseq %>
+  </p>
+  <p>
+    <%= f.label :caller_route_set %><br />
+    <%= f.text_field :caller_route_set %>
+  </p>
+  <p>
+    <%= f.label :callee_route_set %><br />
+    <%= f.text_field :callee_route_set %>
+  </p>
+  <p>
+    <%= f.label :caller_contact %><br />
+    <%= f.text_field :caller_contact %>
+  </p>
+  <p>
+    <%= f.label :callee_contact %><br />
+    <%= f.text_field :callee_contact %>
+  </p>
+  <p>
+    <%= f.label :caller_sock %><br />
+    <%= f.text_field :caller_sock %>
+  </p>
+  <p>
+    <%= f.label :callee_sock %><br />
+    <%= f.text_field :callee_sock %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :start_time %><br />
+    <%= f.datetime_select :start_time %>
+  </p>
+  <p>
+    <%= f.label :timeout %><br />
+    <%= f.text_field :timeout %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @dialog %> |
+<%= link_to 'Back', dialogs_path %>

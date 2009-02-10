@@ -16448,3 +16448,50 @@ Rendered _list_column_headings (14.0ms)
 Rendered _messages (0.6ms)
 Rendered _list (25.6ms)
 Completed in 61ms (View: 45, DB: 2) | 200 OK [http://localhost/locations?authenticity_token=863cdfac284005c2d678e0853ba018ccd4179119]
+  [4;36;1mSQL (3.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDomains (20090119015603)
+Migrating to CreateSubscribers (20090119025010)
+Migrating to CreateDbAliases (20090201194455)
+Migrating to CreateGateways (20090209182720)
+Migrating to CreateRoutes (20090209203236)
+Migrating to CreateTrusteds (20090210174714)
+Migrating to CreateLocations (20090210181114)
+Migrating to CreateDialogs (20090210184740)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (14.3ms)[0m   [0mCREATE TABLE "dialog" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hash_entry" integer, "hash_id" integer, "callid" varchar(255), "from_uri" varchar(255), "from_tag" varchar(255), "to_uri" varchar(255), "to_tag" varchar(255), "caller_cseq" varchar(255), "callee_cseq" varchar(255), "caller_route_set" varchar(255), "callee_route_set" varchar(255), "caller_contact" varchar(255), "callee_contact" varchar(255), "caller_sock" varchar(255), "callee_sock" varchar(255), "state" integer, "start_time" datetime, "timeout" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090210184740')[0m
+  [4;35;1mSQL (1.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (2.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("db_aliases")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("dialog")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("domain")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("gw")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("lcr")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("location")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("subscriber")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("trusted")[0m
+
+
+Processing DialogsController#index (for 127.0.0.1 at 2009-02-10 16:50:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dialogs"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "dialog" [0m
+  [4;35;1mDialog Load (1.6ms)[0m   [0mSELECT "dialog".* FROM "dialog" ORDER BY dialog."start_time" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "dialog".* FROM "dialog" ORDER BY dialog."start_time" ASC LIMIT 15 OFFSET 0[0m
+Rendering template within layouts/default
+Rendering dialogs/list
+Rendered _list_header (3.9ms)
+Rendered _list_column_headings (11.6ms)
+Rendered _messages (0.6ms)
+Rendered _list (22.5ms)
+Completed in 92ms (View: 60, DB: 2) | 200 OK [http://localhost/dialogs]

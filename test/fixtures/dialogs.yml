@@ -1,0 +1,41 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  hash_entry: 1
+  hash_id: 1
+  callid: MyString
+  from_uri: MyString
+  from_tag: MyString
+  to_uri: MyString
+  to_tag: MyString
+  caller_cseq: MyString
+  callee_cseq: MyString
+  caller_route_set: MyString
+  callee_route_set: MyString
+  caller_contact: MyString
+  callee_contact: MyString
+  caller_sock: MyString
+  callee_sock: MyString
+  state: 1
+  start_time: 2009-02-10 16:47:40
+  timeout: 1
+
+two:
+  hash_entry: 1
+  hash_id: 1
+  callid: MyString
+  from_uri: MyString
+  from_tag: MyString
+  to_uri: MyString
+  to_tag: MyString
+  caller_cseq: MyString
+  callee_cseq: MyString
+  caller_route_set: MyString
+  callee_route_set: MyString
+  caller_contact: MyString
+  callee_contact: MyString
+  caller_sock: MyString
+  callee_sock: MyString
+  state: 1
+  start_time: 2009-02-10 16:47:40
+  timeout: 1

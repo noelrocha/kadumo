@@ -9,13 +9,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090210181114) do
+ActiveRecord::Schema.define(:version => 20090210184740) do
 
   create_table "db_aliases", :force => true do |t|
     t.string   "username"
     t.string   "domain"
     t.string   "alias_username"
     t.string   "alias_domain"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "dialog", :force => true do |t|
+    t.integer  "hash_entry"
+    t.integer  "hash_id"
+    t.string   "callid"
+    t.string   "from_uri"
+    t.string   "from_tag"
+    t.string   "to_uri"
+    t.string   "to_tag"
+    t.string   "caller_cseq"
+    t.string   "callee_cseq"
+    t.string   "caller_route_set"
+    t.string   "callee_route_set"
+    t.string   "caller_contact"
+    t.string   "callee_contact"
+    t.string   "caller_sock"
+    t.string   "callee_sock"
+    t.integer  "state"
+    t.datetime "start_time"
+    t.integer  "timeout"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

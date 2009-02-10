@@ -1,0 +1,54 @@
+<h1>Listing dialogs</h1>
+
+<table>
+  <tr>
+    <th>Hash entry</th>
+    <th>Hash</th>
+    <th>Callid</th>
+    <th>From uri</th>
+    <th>From tag</th>
+    <th>To uri</th>
+    <th>To tag</th>
+    <th>Caller cseq</th>
+    <th>Callee cseq</th>
+    <th>Caller route set</th>
+    <th>Callee route set</th>
+    <th>Caller contact</th>
+    <th>Callee contact</th>
+    <th>Caller sock</th>
+    <th>Callee sock</th>
+    <th>State</th>
+    <th>Start time</th>
+    <th>Timeout</th>
+  </tr>
+
+<% for dialog in @dialogs %>
+  <tr>
+    <td><%=h dialog.hash_entry %></td>
+    <td><%=h dialog.hash_id %></td>
+    <td><%=h dialog.callid %></td>
+    <td><%=h dialog.from_uri %></td>
+    <td><%=h dialog.from_tag %></td>
+    <td><%=h dialog.to_uri %></td>
+    <td><%=h dialog.to_tag %></td>
+    <td><%=h dialog.caller_cseq %></td>
+    <td><%=h dialog.callee_cseq %></td>
+    <td><%=h dialog.caller_route_set %></td>
+    <td><%=h dialog.callee_route_set %></td>
+    <td><%=h dialog.caller_contact %></td>
+    <td><%=h dialog.callee_contact %></td>
+    <td><%=h dialog.caller_sock %></td>
+    <td><%=h dialog.callee_sock %></td>
+    <td><%=h dialog.state %></td>
+    <td><%=h dialog.start_time %></td>
+    <td><%=h dialog.timeout %></td>
+    <td><%= link_to 'Show', dialog %></td>
+    <td><%= link_to 'Edit', edit_dialog_path(dialog) %></td>
+    <td><%= link_to 'Destroy', dialog, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New dialog', new_dialog_path %>
