@@ -11,8 +11,6 @@ RAILS_GEM_VERSION = '2.2.2' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
-  config.gem "composite_primary_keys"
-
   config.time_zone = 'UTC'
 
   config.action_controller.session = {
@@ -20,5 +18,3 @@ Rails::Initializer.run do |config|
     :secret      => '6e9b92d030ea9b8a55a0d993e9b723008a5cba18e171413f6dbd5ca1556916c7c1394f107270fe3ce02a5a05265e55f4779fe4466b13d52033b1f0436eaf224b'
   }
 end
-
-require 'composite_primary_keys'

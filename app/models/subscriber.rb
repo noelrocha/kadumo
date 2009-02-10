@@ -1,3 +1,19 @@
+# == Schema Information
+# Schema version: 20090210184740
+#
+# Table name: subscriber
+#
+#  id            :integer         not null, primary key
+#  username      :string(255)
+#  password      :string(255)
+#  domain        :string(255)
+#  first_name    :string(255)
+#  last_name     :string(255)
+#  email_address :string(255)
+#  created_at    :datetime
+#  updated_at    :datetime
+#
+
 class Subscriber < ActiveRecord::Base
   set_table_name APP_TABLES_NAMES['subscribers']
 

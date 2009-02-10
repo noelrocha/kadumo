@@ -7,7 +7,7 @@ class CreateRoutes < ActiveRecord::Migration
       t.integer :priority
 
       t.timestamps
-    end
+    end    
   end
 
   def self.down

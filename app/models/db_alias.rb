@@ -1,3 +1,17 @@
+# == Schema Information
+# Schema version: 20090210184740
+#
+# Table name: db_aliases
+#
+#  id             :integer         not null, primary key
+#  username       :string(255)
+#  domain         :string(255)
+#  alias_username :string(255)
+#  alias_domain   :string(255)
+#  created_at     :datetime
+#  updated_at     :datetime
+#
+
 class DbAlias < ActiveRecord::Base
 
   set_table_name APP_TABLES_NAMES['dbaliases']

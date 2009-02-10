@@ -5,6 +5,8 @@ class CreateDomains < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    add_index APP_TABLES_NAMES['domains'], :name
   end
 
   def self.down
