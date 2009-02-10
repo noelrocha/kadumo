@@ -1,0 +1,78 @@
+<p>
+  <b>Username:</b>
+  <%=h @location.username %>
+</p>
+
+<p>
+  <b>Domain:</b>
+  <%=h @location.domain %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%=h @location.contact %>
+</p>
+
+<p>
+  <b>Received:</b>
+  <%=h @location.received %>
+</p>
+
+<p>
+  <b>Path:</b>
+  <%=h @location.path %>
+</p>
+
+<p>
+  <b>Expires:</b>
+  <%=h @location.expires %>
+</p>
+
+<p>
+  <b>Q:</b>
+  <%=h @location.q %>
+</p>
+
+<p>
+  <b>Callid:</b>
+  <%=h @location.callid %>
+</p>
+
+<p>
+  <b>Cseq:</b>
+  <%=h @location.cseq %>
+</p>
+
+<p>
+  <b>Last modified:</b>
+  <%=h @location.last_modified %>
+</p>
+
+<p>
+  <b>Flags:</b>
+  <%=h @location.flags %>
+</p>
+
+<p>
+  <b>Cflags:</b>
+  <%=h @location.cflags %>
+</p>
+
+<p>
+  <b>User agent:</b>
+  <%=h @location.user_agent %>
+</p>
+
+<p>
+  <b>Socket:</b>
+  <%=h @location.socket %>
+</p>
+
+<p>
+  <b>Methods:</b>
+  <%=h @location.methods %>
+</p>
+
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>

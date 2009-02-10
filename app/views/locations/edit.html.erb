@@ -1,0 +1,72 @@
+<h1>Editing location</h1>
+
+<% form_for(@location) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :domain %><br />
+    <%= f.text_field :domain %>
+  </p>
+  <p>
+    <%= f.label :contact %><br />
+    <%= f.text_field :contact %>
+  </p>
+  <p>
+    <%= f.label :received %><br />
+    <%= f.text_field :received %>
+  </p>
+  <p>
+    <%= f.label :path %><br />
+    <%= f.text_field :path %>
+  </p>
+  <p>
+    <%= f.label :expires %><br />
+    <%= f.datetime_select :expires %>
+  </p>
+  <p>
+    <%= f.label :q %><br />
+    <%= f.text_field :q %>
+  </p>
+  <p>
+    <%= f.label :callid %><br />
+    <%= f.text_field :callid %>
+  </p>
+  <p>
+    <%= f.label :cseq %><br />
+    <%= f.text_field :cseq %>
+  </p>
+  <p>
+    <%= f.label :last_modified %><br />
+    <%= f.datetime_select :last_modified %>
+  </p>
+  <p>
+    <%= f.label :flags %><br />
+    <%= f.text_field :flags %>
+  </p>
+  <p>
+    <%= f.label :cflags %><br />
+    <%= f.text_field :cflags %>
+  </p>
+  <p>
+    <%= f.label :user_agent %><br />
+    <%= f.text_field :user_agent %>
+  </p>
+  <p>
+    <%= f.label :socket %><br />
+    <%= f.text_field :socket %>
+  </p>
+  <p>
+    <%= f.label :methods %><br />
+    <%= f.text_field :methods %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @location %> |
+<%= link_to 'Back', locations_path %>

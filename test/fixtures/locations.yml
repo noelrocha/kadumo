@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  username: MyString
+  domain: MyString
+  contact: MyString
+  received: MyString
+  path: MyString
+  expires: 2009-02-10 16:11:14
+  q: 1.5
+  callid: MyString
+  cseq: 1
+  last_modified: 2009-02-10 16:11:14
+  flags: 1
+  cflags: 1
+  user_agent: MyString
+  socket: MyString
+  methods: 1
+
+two:
+  username: MyString
+  domain: MyString
+  contact: MyString
+  received: MyString
+  path: MyString
+  expires: 2009-02-10 16:11:14
+  q: 1.5
+  callid: MyString
+  cseq: 1
+  last_modified: 2009-02-10 16:11:14
+  flags: 1
+  cflags: 1
+  user_agent: MyString
+  socket: MyString
+  methods: 1

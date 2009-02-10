@@ -15783,3 +15783,668 @@ Processing TrustedsController#destroy (for 127.0.0.1 at 2009-02-10 16:02:45) [DE
 Rendering trusteds/destroy.rjs
 Rendered _messages (0.7ms)
 Completed in 36ms (View: 9, DB: 2) | 200 OK [http://localhost/trusteds/3?_method=delete&authenticity_token=863cdfac284005c2d678e0853ba018ccd4179119]
+  [4;36;1mSQL (2.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDomains (20090119015603)
+Migrating to CreateSubscribers (20090119025010)
+Migrating to CreateDbAliases (20090201194455)
+Migrating to CreateGateways (20090209182720)
+Migrating to CreateRoutes (20090209203236)
+Migrating to CreateTrusteds (20090210174714)
+Migrating to CreateLocations (20090210181114)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (13.7ms)[0m   [0mCREATE TABLE "" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "contact" varchar(255), "received" varchar(255), "path" varchar(255), "expires" datetime, "q" float, "callid" varchar(255), "cseq" integer, "last_modified" datetime, "flags" integer, "cflags" integer, "user_agent" varchar(255), "socket" varchar(255), "methods" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090210181114')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (16.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("db_aliases")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("domain")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("gw")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("lcr")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("subscriber")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("trusted")[0m
+
+
+Processing SubscribersController#index (for 127.0.0.1 at 2009-02-10 16:14:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subscribers"}
+  [4;36;1mSQL (2.7ms)[0m   [0;1mSELECT COUNT(*) AS count_all FROM (SELECT DISTINCT "subscriber".id FROM "subscriber" LEFT OUTER JOIN "domain" ON "domain".id = "subscriber".domain ) count_all_subquery[0m
+  [4;35;1mSubscriber Load (0.5ms)[0m   [0mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering template within layouts/default
+Rendering subscribers/list
+Rendered _list_header (4.8ms)
+Rendered _list_column_headings (11.4ms)
+Rendered _messages (0.7ms)
+Rendered _list (21.9ms)
+Completed in 147ms (View: 58, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-02-10 16:14:32) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"863cdfac284005c2d678e0853ba018ccd4179119", "controller"=>"locations"}
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "" [0m
+  [4;36;1mLocation Load (0.0ms)[0m   [0;1mSQLite3::SQLException: near ".": syntax error: SELECT "".* FROM "" ORDER BY ."username" ASC, ."expires" ASC LIMIT 15 OFFSET 0[0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near ".": syntax error: SELECT "".* FROM ""   ORDER BY ."username" ASC, ."expires" ASC LIMIT 15 OFFSET 0):
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract_adapter.rb:188:in `log'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:275:in `select'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:81:in `cache_sql'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+    /vendor/rails/activerecord/lib/active_record/base.rb:635:in `find_by_sql'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1490:in `find_every'
+    /vendor/rails/activerecord/lib/active_record/base.rb:589:in `find'
+    /vendor/plugins/active_scaffold/lib/active_scaffold/finder.rb:165:in `find_page'
+    /vendor/plugins/active_scaffold/lib/paginator.rb:66:in `call'
+    /vendor/plugins/active_scaffold/lib/paginator.rb:66:in `page'
+    /vendor/plugins/active_scaffold/lib/paginator.rb:93:in `call'
+    /vendor/plugins/active_scaffold/lib/paginator.rb:93:in `items'
+    /vendor/plugins/active_scaffold/lib/active_scaffold/actions/list.rb:64:in `do_list'
+    /vendor/plugins/active_scaffold/lib/active_scaffold/actions/list.rb:33:in `list'
+    /vendor/plugins/active_scaffold/lib/active_scaffold/actions/list.rb:8:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (233.0ms)
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (12.5ms)
+Rendering /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing SubscribersController#index (for 127.0.0.1 at 2009-02-10 16:14:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subscribers"}
+  [4;35;1mSQL (2.3ms)[0m   [0mSELECT COUNT(*) AS count_all FROM (SELECT DISTINCT "subscriber".id FROM "subscriber" LEFT OUTER JOIN "domain" ON "domain".id = "subscriber".domain ) count_all_subquery[0m
+  [4;36;1mSubscriber Load (0.4ms)[0m   [0;1mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering template within layouts/default
+Rendering subscribers/list
+Rendered _list_header (2.9ms)
+Rendered _list_column_headings (10.6ms)
+Rendered _messages (0.6ms)
+Rendered _list (20.9ms)
+Completed in 120ms (View: 52, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-02-10 16:15:00) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"863cdfac284005c2d678e0853ba018ccd4179119", "controller"=>"locations"}
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "" [0m
+  [4;35;1mLocation Load (0.0ms)[0m   [0mSQLite3::SQLException: near ".": syntax error: SELECT "".* FROM "" ORDER BY ."username" ASC, ."expires" ASC LIMIT 15 OFFSET 0[0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near ".": syntax error: SELECT "".* FROM ""   ORDER BY ."username" ASC, ."expires" ASC LIMIT 15 OFFSET 0):
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract_adapter.rb:188:in `log'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:275:in `select'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:81:in `cache_sql'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+    /vendor/rails/activerecord/lib/active_record/base.rb:635:in `find_by_sql'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1490:in `find_every'
+    /vendor/rails/activerecord/lib/active_record/base.rb:589:in `find'
+    /vendor/plugins/active_scaffold/lib/active_scaffold/finder.rb:165:in `find_page'
+    /vendor/plugins/active_scaffold/lib/paginator.rb:66:in `call'
+    /vendor/plugins/active_scaffold/lib/paginator.rb:66:in `page'
+    /vendor/plugins/active_scaffold/lib/paginator.rb:93:in `call'
+    /vendor/plugins/active_scaffold/lib/paginator.rb:93:in `items'
+    /vendor/plugins/active_scaffold/lib/active_scaffold/actions/list.rb:64:in `do_list'
+    /vendor/plugins/active_scaffold/lib/active_scaffold/actions/list.rb:33:in `list'
+    /vendor/plugins/active_scaffold/lib/active_scaffold/actions/list.rb:8:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (82.1ms)
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (10.8ms)
+Rendering /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-10 16:15:16) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"863cdfac284005c2d678e0853ba018ccd4179119", "controller"=>"locations"}
+
+
+ActiveRecord::StatementInvalid (Could not find table 'location'):
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    /vendor/rails/activesupport/lib/active_support/core_ext/object/misc.rb:39:in `returning'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1220:in `columns'
+    /vendor/plugins/active_scaffold/lib/active_scaffold/config/core.rb:100:in `initialize'
+    /vendor/plugins/active_scaffold/lib/active_scaffold.rb:56:in `new'
+    /vendor/plugins/active_scaffold/lib/active_scaffold.rb:56:in `active_scaffold'
+    /app/controllers/locations_controller.rb:3
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:381:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:256:in `require_or_load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:427:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:77:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:89:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:352:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:351:in `each'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:351:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:388:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (66.7ms)
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (9.8ms)
+Rendering /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (13.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDomains (20090119015603)
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE "domain" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090119015603')[0m
+Migrating to CreateSubscribers (20090119025010)
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "subscriber" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "domain" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email_address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090119025010')[0m
+Migrating to CreateDbAliases (20090201194455)
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE "db_aliases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "alias_username" varchar(255), "alias_domain" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090201194455')[0m
+Migrating to CreateGateways (20090209182720)
+  [4;36;1mSQL (4.3ms)[0m   [0;1mCREATE TABLE "gw" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "gw_name" varchar(255), "grp_id" integer, "ip_addr" varchar(255), "port" integer, "uri_scheme" integer, "transport" integer, "strip" integer, "tag" varchar(255), "flags" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090209182720')[0m
+Migrating to CreateRoutes (20090209203236)
+  [4;36;1mSQL (70.0ms)[0m   [0;1mCREATE TABLE "lcr" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "prefix" varchar(255), "from_uri" varchar(255), "grp_id" integer, "priority" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090209203236')[0m
+Migrating to CreateTrusteds (20090210174714)
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE "trusted" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "src_ip" varchar(255), "proto" varchar(255), "from_pattern" varchar(255), "tag" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090210174714')[0m
+Migrating to CreateLocations (20090210181114)
+  [4;36;1mSQL (7.8ms)[0m   [0;1mCREATE TABLE "" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "contact" varchar(255), "received" varchar(255), "path" varchar(255), "expires" datetime, "q" float, "callid" varchar(255), "cseq" integer, "last_modified" datetime, "flags" integer, "cflags" integer, "user_agent" varchar(255), "socket" varchar(255), "methods" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (4.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090210181114')[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("db_aliases")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("domain")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("gw")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("lcr")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mPRAGMA index_list("subscriber")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("trusted")[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDomains (20090119015603)
+Migrating to CreateSubscribers (20090119025010)
+Migrating to CreateDbAliases (20090201194455)
+Migrating to CreateGateways (20090209182720)
+Migrating to CreateRoutes (20090209203236)
+Migrating to CreateTrusteds (20090210174714)
+Migrating to CreateLocations (20090210181114)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("db_aliases")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("domain")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("gw")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("lcr")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("subscriber")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("trusted")[0m
+
+
+Processing TrustedsController#index (for 127.0.0.1 at 2009-02-10 16:16:54) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"863cdfac284005c2d678e0853ba018ccd4179119", "controller"=>"trusteds"}
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "trusted" [0m
+  [4;35;1mTrusted Load (1.7ms)[0m   [0mSELECT "trusted".* FROM "trusted" ORDER BY trusted."src_ip" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "trusted".* FROM "trusted" ORDER BY trusted."src_ip" ASC LIMIT 15 OFFSET 0[0m
+Rendering trusteds/list
+Rendered _list_header (5.7ms)
+Rendered _list_column_headings (12.5ms)
+Rendered _messages (0.6ms)
+Rendered _list (23.5ms)
+Completed in 89ms (View: 46, DB: 2) | 200 OK [http://localhost/trusteds?authenticity_token=863cdfac284005c2d678e0853ba018ccd4179119]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-10 16:16:56) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"863cdfac284005c2d678e0853ba018ccd4179119", "controller"=>"locations"}
+
+
+ActiveRecord::StatementInvalid (Could not find table 'location'):
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    /vendor/rails/activesupport/lib/active_support/core_ext/object/misc.rb:39:in `returning'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1220:in `columns'
+    /vendor/plugins/active_scaffold/lib/active_scaffold/config/core.rb:100:in `initialize'
+    /vendor/plugins/active_scaffold/lib/active_scaffold.rb:56:in `new'
+    /vendor/plugins/active_scaffold/lib/active_scaffold.rb:56:in `active_scaffold'
+    /app/controllers/locations_controller.rb:3
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:381:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:256:in `require_or_load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:427:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:77:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:89:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:352:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:351:in `each'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:351:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:388:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (66.9ms)
+Rendered /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (11.2ms)
+Rendering /Users/noelrocha/Workspace/rails/kadumo/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (2.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLocations (20090210181114)
+  [4;36;1mSQL (3.4ms)[0m   [0;1mDROP TABLE ""[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090210181114'[0m
+Migrating to CreateTrusteds (20090210174714)
+  [4;36;1mSQL (2.8ms)[0m   [0;1mDROP TABLE "trusted"[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090210174714'[0m
+Migrating to CreateRoutes (20090209203236)
+  [4;36;1mSQL (3.2ms)[0m   [0;1mDROP TABLE "lcr"[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090209203236'[0m
+Migrating to CreateGateways (20090209182720)
+  [4;36;1mSQL (3.3ms)[0m   [0;1mDROP TABLE "gw"[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090209182720'[0m
+Migrating to CreateDbAliases (20090201194455)
+  [4;36;1mSQL (2.6ms)[0m   [0;1mDROP TABLE "db_aliases"[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090201194455'[0m
+Migrating to CreateSubscribers (20090119025010)
+  [4;36;1mSQL (2.6ms)[0m   [0;1mDROP TABLE "subscriber"[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090119025010'[0m
+Migrating to CreateDomains (20090119015603)
+  [4;36;1mSQL (2.7ms)[0m   [0;1mDROP TABLE "domain"[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090119015603'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDomains (20090119015603)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (13.9ms)[0m   [0mCREATE TABLE "domain" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090119015603')[0m
+Migrating to CreateSubscribers (20090119025010)
+  [4;35;1mSQL (2.9ms)[0m   [0mCREATE TABLE "subscriber" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "domain" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email_address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090119025010')[0m
+Migrating to CreateDbAliases (20090201194455)
+  [4;35;1mSQL (4.6ms)[0m   [0mCREATE TABLE "db_aliases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "alias_username" varchar(255), "alias_domain" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090201194455')[0m
+Migrating to CreateGateways (20090209182720)
+  [4;35;1mSQL (3.4ms)[0m   [0mCREATE TABLE "gw" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "gw_name" varchar(255), "grp_id" integer, "ip_addr" varchar(255), "port" integer, "uri_scheme" integer, "transport" integer, "strip" integer, "tag" varchar(255), "flags" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090209182720')[0m
+Migrating to CreateRoutes (20090209203236)
+  [4;35;1mSQL (3.3ms)[0m   [0mCREATE TABLE "lcr" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "prefix" varchar(255), "from_uri" varchar(255), "grp_id" integer, "priority" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090209203236')[0m
+Migrating to CreateTrusteds (20090210174714)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "trusted" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "src_ip" varchar(255), "proto" varchar(255), "from_pattern" varchar(255), "tag" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090210174714')[0m
+Migrating to CreateLocations (20090210181114)
+  [4;35;1mSQL (4.6ms)[0m   [0mCREATE TABLE "location" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "domain" varchar(255), "contact" varchar(255), "received" varchar(255), "path" varchar(255), "expires" datetime, "q" float, "callid" varchar(255), "cseq" integer, "last_modified" datetime, "flags" integer, "cflags" integer, "user_agent" varchar(255), "socket" varchar(255), "methods" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090210181114')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("db_aliases")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("domain")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("gw")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("lcr")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("location")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("subscriber")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("trusted")[0m
+
+
+Processing SubscribersController#index (for 127.0.0.1 at 2009-02-10 16:18:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subscribers"}
+  [4;36;1mSQL (2.5ms)[0m   [0;1mSELECT COUNT(*) AS count_all FROM (SELECT DISTINCT "subscriber".id FROM "subscriber" LEFT OUTER JOIN "domain" ON "domain".id = "subscriber".domain ) count_all_subquery[0m
+  [4;35;1mSubscriber Load (0.5ms)[0m   [0mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering template within layouts/default
+Rendering subscribers/list
+Rendered _list_header (4.9ms)
+Rendered _list_column_headings (12.0ms)
+Rendered _messages (0.6ms)
+Rendered _list (23.3ms)
+Completed in 149ms (View: 61, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing SubscribersController#index (for 127.0.0.1 at 2009-02-10 16:18:03) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"863cdfac284005c2d678e0853ba018ccd4179119", "controller"=>"subscribers"}
+  [4;35;1mSQL (2.3ms)[0m   [0mSELECT COUNT(*) AS count_all FROM (SELECT DISTINCT "subscriber".id FROM "subscriber" LEFT OUTER JOIN "domain" ON "domain".id = "subscriber".domain ) count_all_subquery[0m
+  [4;36;1mSubscriber Load (0.6ms)[0m   [0;1mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "subscriber".* FROM "subscriber" ORDER BY subscriber."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering subscribers/list
+Rendered _list_header (4.4ms)
+Rendered _list_column_headings (152.5ms)
+Rendered _messages (0.7ms)
+Rendered _list (163.3ms)
+Completed in 260ms (View: 184, DB: 3) | 200 OK [http://localhost/subscribers?authenticity_token=863cdfac284005c2d678e0853ba018ccd4179119]
+
+
+Processing DbAliasesController#index (for 127.0.0.1 at 2009-02-10 16:18:10) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"863cdfac284005c2d678e0853ba018ccd4179119", "controller"=>"db_aliases"}
+  [4;36;1mSQL (2.4ms)[0m   [0;1mSELECT COUNT(*) AS count_all FROM (SELECT DISTINCT "db_aliases".id FROM "db_aliases" LEFT OUTER JOIN "domain" ON "domain".id = "db_aliases".domain ) count_all_subquery[0m
+  [4;35;1mDbAlias Load (0.4ms)[0m   [0mSELECT "db_aliases".* FROM "db_aliases" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "db_aliases".* FROM "db_aliases" [0m
+Rendering db_aliases/list
+Rendered _list_header (5.0ms)
+Rendered _list_column_headings (9.7ms)
+Rendered _messages (0.6ms)
+Rendered _list (20.6ms)
+Completed in 123ms (View: 43, DB: 3) | 200 OK [http://localhost/db_aliases?authenticity_token=863cdfac284005c2d678e0853ba018ccd4179119]
+
+
+Processing DomainsController#index (for 127.0.0.1 at 2009-02-10 16:18:10) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"863cdfac284005c2d678e0853ba018ccd4179119", "controller"=>"domains"}
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "domain" [0m
+  [4;36;1mDomain Load (1.6ms)[0m   [0;1mSELECT "domain".* FROM "domain" ORDER BY domain."name" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "domain".* FROM "domain" ORDER BY domain."name" ASC LIMIT 15 OFFSET 0[0m
+Rendering domains/list
+Rendered _list_header (6.5ms)
+Rendered _list_column_headings (4.2ms)
+Rendered _messages (0.6ms)
+Rendered _list (14.3ms)
+Completed in 61ms (View: 44, DB: 2) | 200 OK [http://localhost/domains?authenticity_token=863cdfac284005c2d678e0853ba018ccd4179119]
+
+
+Processing GatewaysController#index (for 127.0.0.1 at 2009-02-10 16:18:11) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"863cdfac284005c2d678e0853ba018ccd4179119", "controller"=>"gateways"}
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM "gw" [0m
+  [4;35;1mGateway Load (0.5ms)[0m   [0mSELECT "gw".* FROM "gw" ORDER BY gw."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "gw".* FROM "gw" ORDER BY gw."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering gateways/list
+Rendered _list_header (6.6ms)
+Rendered _list_column_headings (11.9ms)
+Rendered _messages (0.7ms)
+Rendered _list (25.9ms)
+Completed in 75ms (View: 49, DB: 1) | 200 OK [http://localhost/gateways?authenticity_token=863cdfac284005c2d678e0853ba018ccd4179119]
+
+
+Processing RoutesController#index (for 127.0.0.1 at 2009-02-10 16:18:12) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"863cdfac284005c2d678e0853ba018ccd4179119", "controller"=>"routes"}
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "lcr" [0m
+  [4;36;1mRoute Load (0.5ms)[0m   [0;1mSELECT "lcr".* FROM "lcr" ORDER BY lcr."id" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "lcr".* FROM "lcr" ORDER BY lcr."id" ASC LIMIT 15 OFFSET 0[0m
+Rendering routes/list
+Rendered _list_header (5.4ms)
+Rendered _list_column_headings (10.2ms)
+Rendered _messages (0.6ms)
+Rendered _list (20.9ms)
+Completed in 66ms (View: 44, DB: 1) | 200 OK [http://localhost/routes?authenticity_token=863cdfac284005c2d678e0853ba018ccd4179119]
+
+
+Processing TrustedsController#index (for 127.0.0.1 at 2009-02-10 16:18:13) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"863cdfac284005c2d678e0853ba018ccd4179119", "controller"=>"trusteds"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "trusted" [0m
+  [4;35;1mTrusted Load (1.3ms)[0m   [0mSELECT "trusted".* FROM "trusted" ORDER BY trusted."src_ip" ASC LIMIT 15 OFFSET 0[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "trusted".* FROM "trusted" ORDER BY trusted."src_ip" ASC LIMIT 15 OFFSET 0[0m
+Rendering trusteds/list
+Rendered _list_header (5.0ms)
+Rendered _list_column_headings (12.0ms)
+Rendered _messages (0.6ms)
+Rendered _list (24.3ms)
+Completed in 63ms (View: 46, DB: 2) | 200 OK [http://localhost/trusteds?authenticity_token=863cdfac284005c2d678e0853ba018ccd4179119]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-02-10 16:18:13) [GET]
+  Parameters: {"action"=>"index", "authenticity_token"=>"863cdfac284005c2d678e0853ba018ccd4179119", "controller"=>"locations"}
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "location" [0m
+  [4;36;1mLocation Load (1.3ms)[0m   [0;1mSELECT "location".* FROM "location" ORDER BY location."username" ASC, location."expires" ASC LIMIT 15 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "location".* FROM "location" ORDER BY location."username" ASC, location."expires" ASC LIMIT 15 OFFSET 0[0m
+Rendering locations/list
+Rendered _list_header (3.5ms)
+Rendered _list_column_headings (14.0ms)
+Rendered _messages (0.6ms)
+Rendered _list (25.6ms)
+Completed in 61ms (View: 45, DB: 2) | 200 OK [http://localhost/locations?authenticity_token=863cdfac284005c2d678e0853ba018ccd4179119]

@@ -1,0 +1,48 @@
+<h1>Listing locations</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Domain</th>
+    <th>Contact</th>
+    <th>Received</th>
+    <th>Path</th>
+    <th>Expires</th>
+    <th>Q</th>
+    <th>Callid</th>
+    <th>Cseq</th>
+    <th>Last modified</th>
+    <th>Flags</th>
+    <th>Cflags</th>
+    <th>User agent</th>
+    <th>Socket</th>
+    <th>Methods</th>
+  </tr>
+
+<% for location in @locations %>
+  <tr>
+    <td><%=h location.username %></td>
+    <td><%=h location.domain %></td>
+    <td><%=h location.contact %></td>
+    <td><%=h location.received %></td>
+    <td><%=h location.path %></td>
+    <td><%=h location.expires %></td>
+    <td><%=h location.q %></td>
+    <td><%=h location.callid %></td>
+    <td><%=h location.cseq %></td>
+    <td><%=h location.last_modified %></td>
+    <td><%=h location.flags %></td>
+    <td><%=h location.cflags %></td>
+    <td><%=h location.user_agent %></td>
+    <td><%=h location.socket %></td>
+    <td><%=h location.methods %></td>
+    <td><%= link_to 'Show', location %></td>
+    <td><%= link_to 'Edit', edit_location_path(location) %></td>
+    <td><%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New location', new_location_path %>
