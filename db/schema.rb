@@ -9,16 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090209203236) do
-
-  create_table "aliases", :force => true do |t|
-    t.string   "username"
-    t.string   "domain"
-    t.string   "alias_username"
-    t.string   "alias_domain"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20090210174714) do
 
   create_table "db_aliases", :force => true do |t|
     t.string   "username"
@@ -35,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20090209203236) do
     t.datetime "updated_at"
   end
 
-  create_table "gateways", :force => true do |t|
+  create_table "gw", :force => true do |t|
     t.string   "gw_name"
     t.integer  "grp_id"
     t.string   "ip_addr"
@@ -49,7 +40,7 @@ ActiveRecord::Schema.define(:version => 20090209203236) do
     t.datetime "updated_at"
   end
 
-  create_table "routes", :force => true do |t|
+  create_table "lcr", :force => true do |t|
     t.string   "prefix"
     t.string   "from_uri"
     t.integer  "grp_id"
@@ -65,6 +56,15 @@ ActiveRecord::Schema.define(:version => 20090209203236) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email_address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "trusted", :force => true do |t|
+    t.string   "src_ip"
+    t.string   "proto"
+    t.string   "from_pattern"
+    t.string   "tag"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

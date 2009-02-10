@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :trusteds
+
   map.resources :routes
 
   map.resources :gateways

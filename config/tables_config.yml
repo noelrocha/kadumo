@@ -9,7 +9,7 @@ development:
   dialogs: dialog
   dbaliases: db_aliases
   user_preferences: usr_preferences
-  trusted_hosts: trusted
+  trusted: trusted
   carrier_routes: carrierroute
   carrier_failure_routes: carrierfailureroute
 
@@ -23,7 +23,7 @@ test:
   dialogs: dialog
   aliases: dbaliases
   user_preferences: usr_preferences
-  trusted_hosts: trusted
+  trusted: trusted
   carrier_routes: carrierroute
   carrier_failure_routes: carrierfailureroute
   
@@ -37,6 +37,6 @@ production:
   dialogs: dialog
   dbaliases: dbaliases
   user_preferences: usr_preferences
-  trusted_hosts: trusted
+  trusted: trusted
   carrier_routes: carrierroute
   carrier_failure_routes: carrierfailureroute
