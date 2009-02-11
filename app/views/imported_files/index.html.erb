@@ -1,0 +1,28 @@
+<h1>Listing imported_files</h1>
+
+<table>
+  <tr>
+    <th>Content type</th>
+    <th>Filename</th>
+    <th>Size</th>
+    <th>File type</th>
+    <th>Status</th>
+  </tr>
+
+<% for imported_file in @imported_files %>
+  <tr>
+    <td><%=h imported_file.content_type %></td>
+    <td><%=h imported_file.filename %></td>
+    <td><%=h imported_file.size %></td>
+    <td><%=h imported_file.file_type %></td>
+    <td><%=h imported_file.status %></td>
+    <td><%= link_to 'Show', imported_file %></td>
+    <td><%= link_to 'Edit', edit_imported_file_path(imported_file) %></td>
+    <td><%= link_to 'Destroy', imported_file, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New imported_file', new_imported_file_path %>

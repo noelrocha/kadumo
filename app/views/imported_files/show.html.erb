@@ -1,0 +1,28 @@
+<p>
+  <b>Content type:</b>
+  <%=h @imported_file.content_type %>
+</p>
+
+<p>
+  <b>Filename:</b>
+  <%=h @imported_file.filename %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%=h @imported_file.size %>
+</p>
+
+<p>
+  <b>File type:</b>
+  <%=h @imported_file.file_type %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @imported_file.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_imported_file_path(@imported_file) %> |
+<%= link_to 'Back', imported_files_path %>

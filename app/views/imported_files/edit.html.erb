@@ -1,0 +1,32 @@
+<h1>Editing imported_file</h1>
+
+<% form_for(@imported_file) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :content_type %><br />
+    <%= f.text_field :content_type %>
+  </p>
+  <p>
+    <%= f.label :filename %><br />
+    <%= f.text_field :filename %>
+  </p>
+  <p>
+    <%= f.label :size %><br />
+    <%= f.text_field :size %>
+  </p>
+  <p>
+    <%= f.label :file_type %><br />
+    <%= f.text_field :file_type %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @imported_file %> |
+<%= link_to 'Back', imported_files_path %>

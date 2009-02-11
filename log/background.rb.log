@@ -1,0 +1,333 @@
+Wed Feb 11 02:43:34 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<MissingSourceFile: no such file to load -- sqlite3>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<SystemExit: exit>
+#<MissingSourceFile: no such file to load -- sqlite3>
+Wed Feb 11 10:15:50 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<MissingSourceFile: no such file to load -- sqlite3>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<NoMethodError: undefined method `public_filename' for #<YAML::Object:0x2284004>>
+#<NoMethodError: undefined method `public_filename' for #<YAML::Object:0x22b3160>>
+#<NameError: uninitialized constant FileImporterWorker>
+#<MissingSourceFile: no such file to load -- sqlite3>
+Wed Feb 11 12:45:56 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<MissingSourceFile: no such file to load -- sqlite3>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<NoMethodError: undefined method `public_filename' for 1:Fixnum>
+#<NoMethodError: undefined method `public_filename' for #<YAML::Object:0x22a329c>>
+#<NameError: uninitialized constant FileImporterWorker>
+#<MissingSourceFile: no such file to load -- sqlite3>
+Wed Feb 11 12:47:50 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<MissingSourceFile: no such file to load -- sqlite3>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<NoMethodError: undefined method `lines=' for #<ImportedFile:0x20c1230>>
+#<LoadError: C constant 'NSBundle' not found>
+#<NameError: NameError>
+#<NameError: NameError>
+#<LoadError: C constant 'NSProxy' not found>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Processors::CoreImageProcessor>
+#<MissingSourceFile: no such file to load -- gd2>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Processors::Gd2Processor>
+#<MissingSourceFile: no such file to load -- mini_magick>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Processors::MiniMagickProcessor>
+#<MissingSourceFile: no such file to load -- RMagick>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Processors::RmagickProcessor>
+#<MissingSourceFile: no such file to load -- image_science>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Processors::ImageScienceProcessor>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Processors>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Backends::FileSystemBackend>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Backends>
+#<NameError: uninitialized constant ImportedFile>
+#<NameError: uninitialized constant FileImporterWorker::ImportedFile>
+#<NameError: uninitialized constant FileImporterWorker>
+#<MissingSourceFile: no such file to load -- sqlite3>
+Wed Feb 11 12:48:34 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:46:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:46:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:45:in `each'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:45:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<MissingSourceFile: no such file to load -- sqlite3>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<NameError: undefined local variable or method `logger' for #<FileImporterWorker:0x22a58bc>>
+#<EOFError: end of file reached>
+#<Errno::EEXIST: File exists - /Users/noelrocha/Workspace/rails/kadumo/imported_files/0000/0001>
+#<LoadError: C constant 'NSBundle' not found>
+#<NameError: NameError>
+#<NameError: NameError>
+#<LoadError: C constant 'NSProxy' not found>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Processors::CoreImageProcessor>
+#<MissingSourceFile: no such file to load -- gd2>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Processors::Gd2Processor>
+#<MissingSourceFile: no such file to load -- mini_magick>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Processors::MiniMagickProcessor>
+#<MissingSourceFile: no such file to load -- RMagick>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Processors::RmagickProcessor>
+#<MissingSourceFile: no such file to load -- image_science>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Processors::ImageScienceProcessor>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Processors>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Backends::FileSystemBackend>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Backends>
+#<NameError: uninitialized constant ImportedFile>
+#<NameError: uninitialized constant FileImporterWorker::ImportedFile>
+#<NameError: uninitialized constant FileImporterWorker>
+#<MissingSourceFile: no such file to load -- sqlite3>
+Wed Feb 11 12:49:36 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<I18n::MissingTranslationData: translation missing: en, activerecord, errors, models, domain, blank>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<NoMethodError: undefined method `email=' for #<Subscriber:0x254cb24>>
+#<ActiveRecord::Rollback: ActiveRecord::Rollback>
+#<I18n::MissingTranslationData: translation missing: en, activerecord, errors, models, domain, blank>
+Wed Feb 11 12:52:33 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<I18n::MissingTranslationData: translation missing: en, activerecord, errors, models, domain, blank>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<TypeError: can't convert nil into String>
+#<ActiveRecord::Rollback: ActiveRecord::Rollback>
+#<I18n::MissingTranslationData: translation missing: en, activerecord, errors, models, subscriber, invalid>
+#<I18n::MissingTranslationData: translation missing: en, activerecord, errors, models, domain, blank>
+#<I18n::MissingTranslationData: translation missing: en, activerecord, errors, models, subscriber, blank>
+#<ActiveRecord::Rollback: ActiveRecord::Rollback>
+#<I18n::MissingTranslationData: translation missing: en, activerecord, errors, models, domain, blank>
+Wed Feb 11 12:59:53 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:46:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:46:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:45:in `each'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:45:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<TypeError: can't convert nil into String>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<TypeError: can't convert nil into String>
+Wed Feb 11 13:07:13 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:46:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:46:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:45:in `each'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:45:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<MissingSourceFile: no such file to load -- sqlite3>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<MissingSourceFile: no such file to load -- sqlite3>
+Wed Feb 11 14:58:59 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<SystemExit: exit>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+Wed Feb 11 15:11:21 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:46:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:46:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:45:in `each'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:45:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<TypeError: can't convert nil into String>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<TypeError: can't convert nil into String>
+Wed Feb 11 15:35:57 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<SQLite3::BusyException: database is locked>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<TypeError: can't convert nil into String>
+#<SQLite3::BusyException: database is locked>
+Wed Feb 11 15:45:35 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:46:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:46:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:45:in `each'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:45:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<SystemExit: exit>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+Wed Feb 11 15:49:20 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<SQLite3::BusyException: database is locked>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<TypeError: can't convert nil into String>
+#<SQLite3::BusyException: database is locked>
+Wed Feb 11 15:58:17 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<TypeError: can't convert nil into String>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<SQLite3::BusyException: database is locked>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<TypeError: can't convert nil into String>
+Wed Feb 11 15:59:35 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<NameError: uninitialized constant Subscriber::Domain>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<NameError: uninitialized constant Subscriber>
+#<NameError: uninitialized constant FileImporterWorker::Subscriber>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<NameError: undefined local variable or method `logger' for #<FileImporterWorker:0x229b844 @progress=0>>
+#<NameError: uninitialized constant Domain>
+#<NameError: uninitialized constant Subscriber::Domain>
+Wed Feb 11 16:01:19 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<SQLite3::BusyException: database is locked>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<TypeError: can't convert nil into String>
+#<SQLite3::BusyException: database is locked>
+Wed Feb 11 16:03:45 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<SQLite3::BusyException: database is locked>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<TypeError: can't convert nil into String>
+#<SQLite3::BusyException: database is locked>
+Wed Feb 11 16:05:45 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:46:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:46:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:45:in `each'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:45:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<TypeError: can't convert nil into String>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<SQLite3::BusyException: database is locked>
+#<TypeError: can't convert nil into String>
+Wed Feb 11 16:57:38 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<SystemExit: exit>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+Wed Feb 11 17:04:41 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<NameError: undefined local variable or method `imported_file_id' for #<FileImporterWorker:0x21d9bcc>>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<NameError: uninitialized constant Technoweenie::AttachmentFu::Processors::CoreImageProcessor>
+#<MissingSourceFile: no such file to load -- gd2>
+#<NameError: uninitialized constant ImportedFile>
+#<NameError: uninitialized constant FileImporterWorker::ImportedFile>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<NameError: undefined local variable or method `imported_file_id' for #<FileImporterWorker:0x21d9bcc>>
+Wed Feb 11 17:09:12 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<NameError: uninitialized constant FileImporterWorker::Alias>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /Users/noelrocha/Workspace/rails/kadumo/log/background.rb.pid>
+#<SystemExit: exit>
+#<NameError: uninitialized constant FileImporterWorker::Alias>
+#<NameError: uninitialized constant Alias>
+#<NameError: uninitialized constant Alias>
+#<NameError: uninitialized constant FileImporterWorker::Alias>

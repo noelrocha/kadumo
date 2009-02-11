@@ -26,7 +26,6 @@ class Route < ActiveRecord::Base
   
   private
   def fix_prefix
-    debugger
     prefix = "" if prefix.nil?
   end  
   

@@ -1,0 +1,19 @@
+<div>
+  <%= render :partial => "form", :locals => { :job => @job } %>
+</div>
+
+<hr style="visibility:hidden; margin: 20px auto" />
+
+<table class="jobs">
+  <% @jobs.each do |job| %>
+    <tr class="job <%= cycle(:odd, :even) %>" id="<%= dom_id(job) %>">
+    <%= render :partial => "job", :locals => {:job => job} %>
+    </tr>
+    <%= periodically_call_remote(
+      :url       => admin_job_path(job), 
+      :method    => "get", 
+      :interval  => 5, 
+      :condition => "/^(running|pending|stopping)$/.match(job_state_#{dom_id(job)})")
+    %>  
+  <% end %>
+</table>

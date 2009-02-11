@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090210184740) do
+ActiveRecord::Schema.define(:version => 20090211033551) do
 
   create_table "db_aliases", :force => true do |t|
     t.string   "username"
@@ -62,6 +62,35 @@ ActiveRecord::Schema.define(:version => 20090210184740) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "imported_files", :force => true do |t|
+    t.string   "content_type"
+    t.string   "filename"
+    t.integer  "size"
+    t.integer  "file_type"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "jobs", :force => true do |t|
+    t.string   "worker_class"
+    t.string   "worker_method"
+    t.text     "args"
+    t.text     "result"
+    t.integer  "priority"
+    t.integer  "progress"
+    t.string   "state"
+    t.integer  "lock_version",  :default => 0
+    t.datetime "start_at"
+    t.datetime "started_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "jobs", ["priority"], :name => "index_jobs_on_priority"
+  add_index "jobs", ["start_at"], :name => "index_jobs_on_start_at"
+  add_index "jobs", ["state"], :name => "index_jobs_on_state"
 
   create_table "lcr", :force => true do |t|
     t.string   "prefix"

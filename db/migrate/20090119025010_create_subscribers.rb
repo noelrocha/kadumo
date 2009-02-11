@@ -7,7 +7,8 @@ class CreateSubscribers < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :email_address
-
+      t.string :rpid
+      
       t.timestamps
     end
     

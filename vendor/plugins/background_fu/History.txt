@@ -1,0 +1,56 @@
+
+
+=== 1.0.10 / 2009-02-07
+
+* Compatibility fixes for Rails 2.2.2. [infused, ovelar, ncr]
+* Allow concurrency is deprecated in Rails 2.2 so we check if we can use it. (thanks fixlr).
+
+=== 1.0.9 / 2008-10-22
+
+* Merged a few important fixes from Keith Morrison. Bumped version, fixed gemspec (thanks  森山 誠二郎). Closes #4. [Keith Morrison, 森山 誠二郎, ncr]
+
+=== Master / 2008-07-31
+
+* Make it clear that generated views are meant to be used when bonus features are enabled. [Trevor Turk, ncr]
+
+=== 1.0.8 / 2008-07-30
+
+* Reverted back to "text" column for storing job results so it works on PostgreSQL. [Trevor Turk, ncr]
+
+=== 1.0.7 / 2008-07-16
+
+* Updated docs and fixed a bug regarding started_at and Time.now.utc (the lack of #utc in some places resulted in jobs not starting). [Jeff Berg, ncr]
+* Fixed and refactored scaffolding. [ncr]
+* Removed deprecated Dependencies usage. [ncr]
+* Updated links in footer. [ncr]
+
+=== 1.0.6 / 2008-07-03
+
+* Updated docs to mention config/routes.rb. [Joe Goldwasser, ncr]
+
+=== 1.0.5 / 2008-06-02
+
+* Fixed enqueue method (now properly returns enqueued job). [Jake Yoon, ncr]
+* Fixed background.rb generator so it doens't blow up if Bonus Features are disabled. [Jake Yoon, ncr]
+
+=== 1.0.4 / 2008-05-28
+
+* GitHub is now generating a gem. [ncr]
+* Making sure that it will work as a plugin when installed as a gem. [ncr]
+
+=== 1.0.2 / 2008-05-27
+
+* Fiddling with gemspec to make it work on GitHub. [ncr]
+
+=== 1.0.1 / 2008-05-27
+
+* Updaed README with install instructions. [ncr]
+
+=== 1.0.0 / 2008-05-27
+
+* BackgroundFu is now also a gem. You should check Rails 2.1 and the super sexy gems vendoring features!
+
+  * Updated README.txt so now it looks like those from gems. [ncr]
+  * Previous changes before becoming a gem:
+  * 2008-05-12 Added excessive logging and changed default priority to 0 (Negative priorities allowed). [ncr]
+  * 2008-05-11 Added three columns to Job model: priority (execute jobs in priority descending order), start_at (execute jobs after start_at), lock_version (ensure job is executed by a single daemon). [ncr]
