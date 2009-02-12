@@ -1,0 +1,29 @@
+<center>
+<% form_tag session_path do -%>
+<table width=350 border=0 cellspacing=0 cellpadding=0 style="border:1px solid gray">
+<tr><td>
+<table width=100% cellspacing=0 cellpadding=3>
+	<tr bgcolor=#06c>
+	<td align=left style="color:#FFFFFF; font-size: 14px; font-family:Arial; font-weight:bold; padding: 2 2 2 2">
+		Kadumo Web Interface
+	</td>
+</table>
+</td></tr>
+<tr><td>
+<table width=100% border=0 cellspacing=1 cellpadding=5>
+	<tr>
+		<td width=100 class=item align=right valign=top><%= label_tag 'login' %></td>
+		<td width=250 valign=top><%= text_field_tag 'login', @login %></td>
+	</tr>
+	<tr>
+		<td width=100 class=item align=right valign=top><%= label_tag 'password' %></td>
+		<td width=250 valign=top class=cell_edit><%= password_field_tag 'password', nil %></td>
+	</tr>		
+	<tr><td></td>
+		<td><%= submit_tag 'Log in' %></td>
+	</tr>
+</table>
+</td></tr>
+</table>
+<% end -%>
+</center>
