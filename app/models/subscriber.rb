@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20090210184740
+# Schema version: 20090212194331
 #
 # Table name: subscriber
 #
@@ -10,6 +10,7 @@
 #  first_name    :string(255)
 #  last_name     :string(255)
 #  email_address :string(255)
+#  rpid          :string(255)
 #  created_at    :datetime
 #  updated_at    :datetime
 #

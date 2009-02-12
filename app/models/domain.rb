@@ -1,10 +1,10 @@
 # == Schema Information
-# Schema version: 20090210184740
+# Schema version: 20090212194331
 #
 # Table name: domain
 #
 #  id         :integer         not null, primary key
-#  name       :string(255)
+#  domain     :string(255)
 #  created_at :datetime
 #  updated_at :datetime
 #

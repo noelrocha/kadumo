@@ -289,3 +289,17 @@ Rendering subscribers/create.rjs
 Rendered _list_actions (11.4ms)
 Rendered _list_record (32.7ms)
 Completed in 374ms (View: 43, DB: 4) | 200 OK [http://localhost/subscribers?authenticity_token=77ab3239755a44956059ef48497b8d7aa2975c11]
+ActiveScaffold: extending RESTful routes for users
+ActiveScaffold: extending RESTful routes for dialogs
+ActiveScaffold: extending RESTful routes for locations
+ActiveScaffold: extending RESTful routes for trusteds
+ActiveScaffold: extending RESTful routes for routes
+ActiveScaffold: extending RESTful routes for gateways
+ActiveScaffold: extending RESTful routes for db_aliases
+ActiveScaffold: extending RESTful routes for subscribers
+ActiveScaffold: extending RESTful routes for domains
+  [4;36;1mSQL (3.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
