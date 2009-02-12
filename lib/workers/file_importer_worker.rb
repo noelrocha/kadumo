@@ -19,7 +19,7 @@ class FileImporterWorker
         subscriber = Subscriber.find(:first, :conditions => {:username => username, :domain => domain_name})
       
         if subscriber.nil? then
-          domain = Domain.find_or_create_by_name(:name => domain_name)
+          domain = Domain.find_or_create_by_name(:domain => domain_name)
           subscriber = Subscriber.new(:username => username, :domain => domain)
         end
       
@@ -60,7 +60,7 @@ class FileImporterWorker
           dbalias = DbAlias.new(:alias_username => alias_username, :alias_domain => alias_domain)   
         end
       
-        domain = Domain.find_or_create_by_name(:name => domain_name)
+        domain = Domain.find_or_create_by_name(:domain => domain_name)
         dbalias.username = username
         dbalias.domain = domain
       

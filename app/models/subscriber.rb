@@ -29,7 +29,7 @@ class Subscriber < ActiveRecord::Base
   end
   
   def aliases
-    DbAlias.find(:all, :conditions => {:username => self.username, :domain => self.domain.name })
+    DbAlias.find(:all, :conditions => {:username => self.username, :domain => self.domain.domain })
   end
   
 end
