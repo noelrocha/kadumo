@@ -16,8 +16,11 @@
 </head>
 <body>
 
-<p style="color: green"><%= flash[:notice] %></p>
+<!--p style="color: green"><%= flash[:notice] %></p-->
 
+<%= render :partial => "users/user_bar" %>
+<br/>
+<% if logged_in? %>
 <div style="text-align: center;">
 	<table style="margin-left: auto; margin-right: auto;">
 		<tr>
@@ -51,10 +54,14 @@
 					:method => :get %> | </b></td>								
 		<td><b> | <%= link_to_remote "Upload Files", :url => imported_files_url, 
 					:update => "page_content", :loading => "loading('page_content','Upload Files')", 
-					:method => :get %> | </b></td>										
+					:method => :get %> | </b></td>	
+		<td><b> | <%= link_to_remote "Web Users", :url => users_url, 
+					:update => "page_content", :loading => "loading('page_content','Web Users')", 
+					:method => :get %> | </b></td>														
 		</tr>
 	</table>
 </div>
+<% end %>
 
 <div id="page_content">
 	<%= yield  %>

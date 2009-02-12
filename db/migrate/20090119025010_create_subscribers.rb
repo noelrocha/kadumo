@@ -12,7 +12,7 @@ class CreateSubscribers < ActiveRecord::Migration
       t.timestamps
     end
     
-    add_index APP_TABLES_NAMES['subscribers'], :username, :domain    
+    add_index APP_TABLES_NAMES['subscribers'], [:username, :domain]
   end
 
   def self.down

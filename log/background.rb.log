@@ -331,3 +331,13 @@ SIGTERM
 #<NameError: uninitialized constant Alias>
 #<NameError: uninitialized constant Alias>
 #<NameError: uninitialized constant FileImporterWorker::Alias>
+Wed Feb 11 19:03:31 -0200 2009
+SIGTERM
+["/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `sleep'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:57:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `loop'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:44:in `watch'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:84:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `fork'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:64:in `start_with_pidfile'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/monitor.rb:111:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application_group.rb:113:in `create_monitor'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:244:in `start'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'", "/Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'", "script/../lib/daemons/background_ctl:20"]
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<SystemExit: exit>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<SystemExit: exit>

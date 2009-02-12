@@ -1,4 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
+  
+  map.logout '/logout', :controller => 'sessions', :action => 'destroy'
+  map.login '/login', :controller => 'sessions', :action => 'new'
+  map.register '/register', :controller => 'users', :action => 'create'
+  map.signup '/signup', :controller => 'users', :action => 'new'
+  
+  map.resources :users, :active_scaffold => true
+
+  map.resource :session
+
   map.resources :imported_files
 
   map.resources :dialogs, :active_scaffold => true

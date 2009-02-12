@@ -9,7 +9,7 @@ class CreateDbAliases < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index APP_TABLES_NAMES['dbaliases'], :alias_username, :alias_domain        
+    add_index APP_TABLES_NAMES['dbaliases'], [:alias_username, :alias_domain]        
   end
 
   def self.down

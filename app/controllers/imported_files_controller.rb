@@ -1,7 +1,7 @@
 class ImportedFilesController < ApplicationController
 
   active_scaffold :imported_file do |config|
-    config.label = "Uploaded files"
+    config.label = "Upload files"
     config.create.multipart = true
     config.actions.exclude :update    
     config.columns = [:uploaded_data, :file_type]
