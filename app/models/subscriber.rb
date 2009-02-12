@@ -17,7 +17,7 @@
 class Subscriber < ActiveRecord::Base
   set_table_name APP_TABLES_NAMES['subscribers']
 
-  belongs_to :domain, :foreign_key => 'domain' , :primary_key => 'name'
+  belongs_to :domain, :foreign_key => 'domain' , :primary_key => 'domain'
   #has_many :aliases, :foreign_key => [:username, :domain]
   
   validates_presence_of :username, :password, :domain

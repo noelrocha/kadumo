@@ -46,12 +46,12 @@ ActiveRecord::Schema.define(:version => 20090212194331) do
   end
 
   create_table "domain", :force => true do |t|
-    t.string   "name"
+    t.string   "domain"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "domain", ["name"], :name => "index_domain_on_name"
+  add_index "domain", ["domain"], :name => "index_domain_on_domain"
 
   create_table "gw", :force => true do |t|
     t.string   "gw_name"
