@@ -7,7 +7,7 @@ class MissedCallsController < ApplicationController
     config.columns[:callid].label = "SIP Call-ID"
     config.columns[:sip_code].label = "SIP Reply Code"    
             
-    config.list.sorting = :time => 'ASC'
+    config.list.sorting = {:time => 'ASC'}
     config.actions = [:list, :show, :search]            
   end
 
