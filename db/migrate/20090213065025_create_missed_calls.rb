@@ -1,6 +1,6 @@
 class CreateMissedCalls < ActiveRecord::Migration
   def self.up
-    create_table :missed_calls do |t|
+    create_table APP_TABLES_NAMES['missed_calls'] do |t|
       t.string :method
       t.string :from_tag
       t.string :to_tag
@@ -15,11 +15,11 @@ class CreateMissedCalls < ActiveRecord::Migration
       t.string :src_domain
       t.integer :cdr_id
     end
-    add_index :missed_calls, :method
-    add_index :missed_calls, :callid
+    add_index APP_TABLES_NAMES['missed_calls'], :method
+    add_index APP_TABLES_NAMES['missed_calls'], :callid
   end
 
   def self.down
-    drop_table :missed_calls
+    drop_table APP_TABLES_NAMES['missed_calls']
   end
 end

@@ -1,6 +1,6 @@
 class CreateAccs < ActiveRecord::Migration
   def self.up
-    create_table :acc do |t|
+    create_table APP_TABLES_NAMES['acc'] do |t|
       t.string :method
       t.string :from_tag
       t.string :to_tag
@@ -15,11 +15,11 @@ class CreateAccs < ActiveRecord::Migration
       t.string :src_domain
       t.integer :cdr_id
     end
-    add_index :acc, :method
-    add_index :acc, :callid
+    add_index APP_TABLES_NAMES['acc'], :method
+    add_index APP_TABLES_NAMES['acc'], :callid
   end
 
   def self.down
-    drop_table :acc
+    drop_table APP_TABLES_NAMES['acc']
   end
 end
