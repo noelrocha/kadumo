@@ -1,0 +1,53 @@
+<p>
+  <b>Src username:</b>
+  <%=h @cdr.src_username %>
+</p>
+
+<p>
+  <b>Src domain:</b>
+  <%=h @cdr.src_domain %>
+</p>
+
+<p>
+  <b>Dst username:</b>
+  <%=h @cdr.dst_username %>
+</p>
+
+<p>
+  <b>Dst domain:</b>
+  <%=h @cdr.dst_domain %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%=h @cdr.start_time %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%=h @cdr.duration %>
+</p>
+
+<p>
+  <b>Sip call:</b>
+  <%=h @cdr.sip_call_id %>
+</p>
+
+<p>
+  <b>Sip from tag:</b>
+  <%=h @cdr.sip_from_tag %>
+</p>
+
+<p>
+  <b>Sip to tag:</b>
+  <%=h @cdr.sip_to_tag %>
+</p>
+
+<p>
+  <b>Src ip:</b>
+  <%=h @cdr.src_ip %>
+</p>
+
+
+<%= link_to 'Edit', edit_cdr_path(@cdr) %> |
+<%= link_to 'Back', cdrs_path %>

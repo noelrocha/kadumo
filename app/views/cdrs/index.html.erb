@@ -1,0 +1,38 @@
+<h1>Listing cdrs</h1>
+
+<table>
+  <tr>
+    <th>Src username</th>
+    <th>Src domain</th>
+    <th>Dst username</th>
+    <th>Dst domain</th>
+    <th>Start time</th>
+    <th>Duration</th>
+    <th>Sip call</th>
+    <th>Sip from tag</th>
+    <th>Sip to tag</th>
+    <th>Src ip</th>
+  </tr>
+
+<% for cdr in @cdrs %>
+  <tr>
+    <td><%=h cdr.src_username %></td>
+    <td><%=h cdr.src_domain %></td>
+    <td><%=h cdr.dst_username %></td>
+    <td><%=h cdr.dst_domain %></td>
+    <td><%=h cdr.start_time %></td>
+    <td><%=h cdr.duration %></td>
+    <td><%=h cdr.sip_call_id %></td>
+    <td><%=h cdr.sip_from_tag %></td>
+    <td><%=h cdr.sip_to_tag %></td>
+    <td><%=h cdr.src_ip %></td>
+    <td><%= link_to 'Show', cdr %></td>
+    <td><%= link_to 'Edit', edit_cdr_path(cdr) %></td>
+    <td><%= link_to 'Destroy', cdr, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New cdr', new_cdr_path %>

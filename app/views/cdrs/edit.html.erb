@@ -1,0 +1,52 @@
+<h1>Editing cdr</h1>
+
+<% form_for(@cdr) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :src_username %><br />
+    <%= f.text_field :src_username %>
+  </p>
+  <p>
+    <%= f.label :src_domain %><br />
+    <%= f.text_field :src_domain %>
+  </p>
+  <p>
+    <%= f.label :dst_username %><br />
+    <%= f.text_field :dst_username %>
+  </p>
+  <p>
+    <%= f.label :dst_domain %><br />
+    <%= f.text_field :dst_domain %>
+  </p>
+  <p>
+    <%= f.label :start_time %><br />
+    <%= f.datetime_select :start_time %>
+  </p>
+  <p>
+    <%= f.label :duration %><br />
+    <%= f.text_field :duration %>
+  </p>
+  <p>
+    <%= f.label :sip_call_id %><br />
+    <%= f.text_field :sip_call_id %>
+  </p>
+  <p>
+    <%= f.label :sip_from_tag %><br />
+    <%= f.text_field :sip_from_tag %>
+  </p>
+  <p>
+    <%= f.label :sip_to_tag %><br />
+    <%= f.text_field :sip_to_tag %>
+  </p>
+  <p>
+    <%= f.label :src_ip %><br />
+    <%= f.text_field :src_ip %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @cdr %> |
+<%= link_to 'Back', cdrs_path %>

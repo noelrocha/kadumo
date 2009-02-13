@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  src_username: MyString
+  src_domain: MyString
+  dst_username: MyString
+  dst_domain: MyString
+  start_time: 2009-02-13 03:51:35
+  duration: 1
+  sip_call_id: MyString
+  sip_from_tag: MyString
+  sip_to_tag: MyString
+  src_ip: MyString
+
+two:
+  src_username: MyString
+  src_domain: MyString
+  dst_username: MyString
+  dst_domain: MyString
+  start_time: 2009-02-13 03:51:35
+  duration: 1
+  sip_call_id: MyString
+  sip_from_tag: MyString
+  sip_to_tag: MyString
+  src_ip: MyString
