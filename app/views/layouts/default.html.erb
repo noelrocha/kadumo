@@ -33,25 +33,34 @@
 		<td><b> | <%= link_to_remote "Domains", :url => domains_url, 
 					:update => "page_content", :loading => "loading('page_content','Domains')", 
 					:method => :get %> | </b></td>
-		<td><b> | <%= link_to_remote "Registered Users", :url => locations_url, 
-					:update => "page_content", :loading => "loading('page_content','Registered Users')", 
-					:method => :get %> | </b></td>
-		<td><b> | <%= link_to_remote "Active Calls", :url => dialogs_url, 
-					:update => "page_content", :loading => "loading('page_content','Active Calls')", 
-					:method => :get %> | </b></td>					
-		</tr>
-	</table>
-	<table style="margin-left: auto; margin-right: auto;">
-		<tr>
 		<td><b> | <%= link_to_remote "LCR Gateways", :url => gateways_url, 
 					:update => "page_content", :loading => "loading('page_content','LCR Gateways')", 
 					:method => :get %> | </b></td>	
 		<td><b> | <%= link_to_remote "LCR Routes", :url => routes_url, 
 					:update => "page_content", :loading => "loading('page_content','LCR Routes')", 
 					:method => :get %> | </b></td>				
-		<td><b> | <%= link_to_remote "Trusted Requests", :url => trusteds_url, 
-					:update => "page_content", :loading => "loading('page_content','Trusted Requests')", 
-					:method => :get %> | </b></td>								
+		<td><b> | <%= link_to_remote "Trusted Hosts", :url => trusteds_url, 
+					:update => "page_content", :loading => "loading('page_content','Trusted Hosts')", 
+					:method => :get %> | </b></td>									
+		</tr>					
+	</table>
+	<table style="margin-left: auto; margin-right: auto;">
+		<tr>
+		<td><b> | <%= link_to_remote "Online Users", :url => locations_url, 
+					:update => "page_content", :loading => "loading('page_content','Online Users')", 
+					:method => :get %> | </b></td>
+		<td><b> | <%= link_to_remote "Active Calls", :url => dialogs_url, 
+					:update => "page_content", :loading => "loading('page_content','Active Calls')", 
+					:method => :get %> | </b></td>					
+		<td><b> | <%= link_to_remote "Accounting", :url => accs_url, 
+					:update => "page_content", :loading => "loading('page_content','Accounting')", 
+					:method => :get %> | </b></td>													
+		<td><b> | <%= link_to_remote "Missed Calls", :url => missed_calls_url, 
+					:update => "page_content", :loading => "loading('page_content','Missed Calls')", 
+					:method => :get %> | </b></td>													
+		<td><b> | <%= link_to_remote "CDRs", :url => cdrs_url, 
+					:update => "page_content", :loading => "loading('page_content','CDRs')", 
+					:method => :get %> | </b></td>													
 		<td><b> | <%= link_to_remote "Upload Files", :url => imported_files_url, 
 					:update => "page_content", :loading => "loading('page_content','Upload Files')", 
 					:method => :get %> | </b></td>	

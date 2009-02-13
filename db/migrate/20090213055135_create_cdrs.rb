@@ -11,7 +11,7 @@ class CreateCdrs < ActiveRecord::Migration
       t.string :sip_from_tag
       t.string :sip_to_tag
       t.string :src_ip
-
+    
       t.timestamps
     end  
     add_index :cdrs, [:sip_call_id, :sip_from_tag, :sip_to_tag]

@@ -13,8 +13,10 @@ class ImportedFilesController < ApplicationController
     config.action_links.add 'import_file', :label => 'Process this file', :type => :record, 
                                            :page => true, :confirm => 'Are you sure that you want to process this file?'
 
-    config.create.link.label = 'Upload new'
+    config.create.link.label = 'Upload'
     config.create.label = 'Upload new file'
+    
+    config.actions = [:list, :create]            
   end
   
   def import_file

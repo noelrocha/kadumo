@@ -9,7 +9,43 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090212194331) do
+ActiveRecord::Schema.define(:version => 20090213065025) do
+
+  create_table "acc", :force => true do |t|
+    t.string   "method"
+    t.string   "from_tag"
+    t.string   "to_tag"
+    t.string   "callid"
+    t.string   "sip_code"
+    t.string   "sip_reason"
+    t.datetime "time"
+    t.string   "src_ip"
+    t.string   "dst_user"
+    t.string   "dst_domain"
+    t.string   "src_user"
+    t.string   "src_domain"
+    t.integer  "cdr_id"
+  end
+
+  add_index "acc", ["callid"], :name => "index_acc_on_callid"
+  add_index "acc", ["method"], :name => "index_acc_on_method"
+
+  create_table "cdrs", :force => true do |t|
+    t.string   "src_username"
+    t.string   "src_domain"
+    t.string   "dst_username"
+    t.string   "dst_domain"
+    t.datetime "start_time"
+    t.integer  "duration"
+    t.string   "sip_call_id"
+    t.string   "sip_from_tag"
+    t.string   "sip_to_tag"
+    t.string   "src_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cdrs", ["sip_call_id", "sip_from_tag", "sip_to_tag"], :name => "index_cdrs_on_sip_call_id_and_sip_from_tag_and_sip_to_tag"
 
   create_table "dbaliases", :force => true do |t|
     t.string   "username"
@@ -124,6 +160,25 @@ ActiveRecord::Schema.define(:version => 20090212194331) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "missed_calls", :force => true do |t|
+    t.string   "method"
+    t.string   "from_tag"
+    t.string   "to_tag"
+    t.string   "callid"
+    t.string   "sip_code"
+    t.string   "sip_reason"
+    t.datetime "time"
+    t.string   "src_ip"
+    t.string   "dst_user"
+    t.string   "dst_domain"
+    t.string   "src_user"
+    t.string   "src_domain"
+    t.integer  "cdr_id"
+  end
+
+  add_index "missed_calls", ["callid"], :name => "index_missed_calls_on_callid"
+  add_index "missed_calls", ["method"], :name => "index_missed_calls_on_method"
 
   create_table "subscriber", :force => true do |t|
     t.string   "username"

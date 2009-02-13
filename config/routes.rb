@@ -1,9 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :missed_calls
-
-  map.resources :accs
-
-  map.resources :cdrs
 
   
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
@@ -11,11 +6,18 @@ ActionController::Routing::Routes.draw do |map|
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
   
-  map.resources :users, :active_scaffold => true
 
   map.resource :session
 
   map.resources :imported_files
+
+  map.resources :users, :active_scaffold => true
+  
+  map.resources :missed_calls, :active_scaffold => true
+
+  map.resources :accs, :active_scaffold => true
+
+  map.resources :cdrs, :active_scaffold => true
 
   map.resources :dialogs, :active_scaffold => true
 
