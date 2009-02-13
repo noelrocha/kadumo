@@ -1,0 +1,12 @@
+<h1>Editing missed_call</h1>
+
+<% form_for(@missed_call) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @missed_call %> |
+<%= link_to 'Back', missed_calls_path %>

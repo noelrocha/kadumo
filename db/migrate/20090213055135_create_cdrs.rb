@@ -16,42 +16,6 @@ class CreateCdrs < ActiveRecord::Migration
     end  
     add_index :cdrs, [:sip_call_id, :sip_from_tag, :sip_to_tag]
     
-    create_table :acc do |t|
-      t.string :method
-      t.string :from_tag
-      t.string :to_tag
-      t.string :callid
-      t.string :sip_code
-      t.string :sip_reason
-      t.datetime :time
-      t.string :src_ip
-      t.string :dst_user
-      t.string :dst_domain
-      t.string :src_user
-      t.string :src_domain
-      t.integer :cdr_id
-    end
-    add_index :acc, :method
-    add_index :acc, :callid
-    
-    create_table :missed_calls do |t|
-      t.string :method
-      t.string :from_tag
-      t.string :to_tag
-      t.string :callid
-      t.string :sip_code
-      t.string :sip_reason
-      t.datetime :time
-      t.string :src_ip
-      t.string :dst_user
-      t.string :dst_domain
-      t.string :src_user
-      t.string :src_domain
-      t.integer :cdr_id
-    end
-    add_index :missed_calls, :method
-    add_index :missed_calls, :callid
-
     execute <<-eos
       CREATE PROCEDURE `cdrs_builder`()
       BEGIN
@@ -81,7 +45,5 @@ class CreateCdrs < ActiveRecord::Migration
 
   def self.down
     drop_table :cdrs
-    drop_table :acc
-    drop_table :missed_calls    
   end
 end

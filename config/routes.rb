@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :missed_calls
+
+  map.resources :accs
+
   map.resources :cdrs
 
   

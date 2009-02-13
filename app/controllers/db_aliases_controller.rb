@@ -1,6 +1,6 @@
 class DbAliasesController < ApplicationController
 
-  active_scaffold :db_aliases do |config|
+  active_scaffold :db_alias do |config|
     config.label = "DB Aliases"
     
     config.columns = [:alias_username, :alias_domain, :username, :domain]

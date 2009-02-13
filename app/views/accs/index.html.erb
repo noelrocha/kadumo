@@ -1,0 +1,18 @@
+<h1>Listing accs</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for acc in @accs %>
+  <tr>
+    <td><%= link_to 'Show', acc %></td>
+    <td><%= link_to 'Edit', edit_acc_path(acc) %></td>
+    <td><%= link_to 'Destroy', acc, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New acc', new_acc_path %>

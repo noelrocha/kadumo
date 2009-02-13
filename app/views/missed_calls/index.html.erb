@@ -1,0 +1,18 @@
+<h1>Listing missed_calls</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for missed_call in @missed_calls %>
+  <tr>
+    <td><%= link_to 'Show', missed_call %></td>
+    <td><%= link_to 'Edit', edit_missed_call_path(missed_call) %></td>
+    <td><%= link_to 'Destroy', missed_call, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New missed_call', new_missed_call_path %>
