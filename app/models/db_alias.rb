@@ -15,12 +15,13 @@
 class DbAlias < ActiveRecord::Base
 
   set_table_name APP_TABLES_NAMES['dbaliases']
-  #set_primary_keys :id
 
   belongs_to :domain, :class_name => "Domain", :foreign_key => 'domain' , :primary_key => 'domain'   
-  validates_presence_of :username, :domain, :alias_username, :alias_domain
+  validates_presence_of :alias_username, :alias_domain
+  validates_presence_of :username, :unless => Proc.new { |dbalias| dbalias.domain.nil? }
   validates_uniqueness_of :alias_username, :scope => :alias_domain
 
+  #set_primary_keys :id
   #belongs_to :subscriber, :foreign_key => [:username, :domain]
   #validates_associated :subscriber
   

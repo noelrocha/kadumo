@@ -11,7 +11,7 @@
 
 ActiveRecord::Schema.define(:version => 20090212194331) do
 
-  create_table "db_aliases", :force => true do |t|
+  create_table "dbaliases", :force => true do |t|
     t.string   "username"
     t.string   "domain"
     t.string   "alias_username"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20090212194331) do
     t.datetime "updated_at"
   end
 
-  add_index "db_aliases", ["alias_username", "alias_domain"], :name => "index_db_aliases_on_alias_username_and_alias_domain"
+  add_index "dbaliases", ["alias_username", "alias_domain"], :name => "index_dbaliases_on_alias_username_and_alias_domain"
 
   create_table "dialog", :force => true do |t|
     t.integer  "hash_entry"
