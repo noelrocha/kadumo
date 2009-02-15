@@ -1,7 +1,7 @@
 # == Schema Information
-# Schema version: 20090210184740
+# Schema version: 20090213065025
 #
-# Table name: db_aliases
+# Table name: dbaliases
 #
 #  id             :integer         not null, primary key
 #  username       :string(255)

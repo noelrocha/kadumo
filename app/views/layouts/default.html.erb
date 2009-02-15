@@ -42,6 +42,9 @@
 		<td><b> | <%= link_to_remote "Trusted Hosts", :url => trusteds_url, 
 					:update => "page_content", :loading => "loading('page_content','Trusted Hosts')", 
 					:method => :get %> | </b></td>									
+		<td><b> | <%= link_to_remote "Groups", :url => groups_url, 
+					:update => "page_content", :loading => "loading('page_content','groups')", 
+					:method => :get %> | </b></td>									
 		</tr>					
 	</table>
 	<table style="margin-left: auto; margin-right: auto;">

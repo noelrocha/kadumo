@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20090212194331
+# Schema version: 20090213065025
 #
 # Table name: trusted
 #

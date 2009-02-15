@@ -7,7 +7,7 @@ class CdrsController < ApplicationController
     config.columns[:sip_call_id].label = "SIP Call-ID"
             
     config.list.sorting = {:start_time => 'ASC'}
-    config.actions = [:list, :show, :search]        
+    config.actions = [:list, :show, :field_search]        
   end
 
 end

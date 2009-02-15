@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090213065025) do
+ActiveRecord::Schema.define(:version => 20090215052822) do
 
   create_table "acc", :force => true do |t|
     t.string   "method"
@@ -29,6 +29,22 @@ ActiveRecord::Schema.define(:version => 20090213065025) do
 
   add_index "acc", ["callid"], :name => "index_acc_on_callid"
   add_index "acc", ["method"], :name => "index_acc_on_method"
+
+  create_table "audits", :force => true do |t|
+    t.integer  "auditable_id"
+    t.string   "auditable_type"
+    t.integer  "user_id"
+    t.string   "user_type"
+    t.string   "username"
+    t.string   "action"
+    t.text     "changes"
+    t.integer  "version",        :default => 0
+    t.datetime "created_at"
+  end
+
+  add_index "audits", ["auditable_id", "auditable_type"], :name => "auditable_index"
+  add_index "audits", ["created_at"], :name => "index_audits_on_created_at"
+  add_index "audits", ["user_id", "user_type"], :name => "user_index"
 
   create_table "cdrs", :force => true do |t|
     t.string   "src_username"
@@ -88,6 +104,14 @@ ActiveRecord::Schema.define(:version => 20090213065025) do
   end
 
   add_index "domain", ["domain"], :name => "index_domain_on_domain"
+
+  create_table "grp", :force => true do |t|
+    t.string   "username"
+    t.string   "domain"
+    t.string   "grp"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "gw", :force => true do |t|
     t.string   "gw_name"

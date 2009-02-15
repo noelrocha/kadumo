@@ -8,7 +8,7 @@ class AccsController < ApplicationController
     config.columns[:sip_code].label = "SIP Reply Code"    
             
     config.list.sorting = {:time => 'ASC'}
-    config.actions = [:list, :show, :search]            
+    config.actions = [:list, :show, :field_search]          
   end
 
 end

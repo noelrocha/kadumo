@@ -1,1 +1,1 @@
-APP_TABLES_NAMES = YAML.load_file("#{RAILS_ROOT}/config/tables_config.yml")[RAILS_ENV]
+APP_TABLES_NAMES = YAML.load_file("#{RAILS_ROOT}/config/tables_config.yml")

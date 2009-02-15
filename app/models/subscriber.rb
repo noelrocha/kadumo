@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20090212194331
+# Schema version: 20090213065025
 #
 # Table name: subscriber
 #
@@ -26,7 +26,7 @@ class Subscriber < ActiveRecord::Base
   #has_many :aliases, :foreign_key => [:username, :domain]
     
   def to_label
-    "#{self.username}@#{self.domain.name}"
+    "#{self.username}@#{self.domain.domain}"
   end
   
   def aliases
