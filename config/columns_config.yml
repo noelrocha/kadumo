@@ -1,0 +1,48 @@
+# config/tables_config.yml
+development:
+  domains: domain
+  subscribers: subscriber
+  locations: location
+  gateways: gw
+  routes: lcr
+  user_groups: grp
+  dialogs: dialog
+  dbaliases: dbaliases
+  user_preferences: usr_preferences
+  trusted: trusted
+  carrier_routes: carrierroute
+  carrier_failure_routes: carrierfailureroute
+  acc: acc
+  missed_calls: missed_calls
+
+test:
+  domains: domain
+  subscribers: subscriber
+  locations: location
+  gateways: gw
+  routes: lcr
+  user_groups: grp
+  dialogs: dialog
+  aliases: dbaliases
+  user_preferences: usr_preferences
+  trusted: trusted
+  carrier_routes: carrierroute
+  carrier_failure_routes: carrierfailureroute
+  acc: acc
+  missed_calls: missed_calls
+      
+production:
+  domains: domain
+  subscribers: subscriber
+  locations: location
+  gateways: gw
+  routes: lcr
+  user_groups: grp
+  dialogs: dialog
+  dbaliases: dbaliases
+  user_preferences: usr_preferences
+  trusted: trusted
+  carrier_routes: carrierroute
+  carrier_failure_routes: carrierfailureroute
+  acc: acc
+  missed_calls: missed_calls  
